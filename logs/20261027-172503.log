@@ -1,0 +1,13 @@
+INFO    : Building target web
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/josue/estructuras-algebra/source/sec-divisibilidad.ptx: StartTag: invalid element name, line 120, column 26 (sec-divisibilidad.ptx, line 120)
+ERROR   : Error assembling source file: StartTag: invalid element name, line 120, column 26 (sec-divisibilidad.ptx, line 120)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+exit    : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

@@ -54,5 +54,82 @@
         </li>
       </ol>
     </statement>
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Como <m>a\mid b</m>, existe <m>r\in\mathbb Z</m> tal que
+            <m>b=ar</m>. Como <m>b\mid c</m>, existe
+            <m>s\in\mathbb Z</m> tal que <m>c=bs</m>. Por tanto,
+            <m>c=(ar)s=a(rs)</m>. Puesto que <m>rs\in\mathbb Z</m>, implica que <m>a\mid c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De <m>a\mid b</m> y <m>a\mid c</m> existen
+            <m>r,s\in\mathbb Z</m> tales que <m>b=ar</m> y <m>c=as</m>.
+            Entonces
+            <m>bx+cy=(ar)x+(as)y=a(rx+sy)</m>. Como
+            <m>rx+sy\in\mathbb Z</m>, se concluye que
+            <m>a\mid (bx+cy)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Los números <m>|a|</m> y <m>|b|</m> son enteros no negativos.
+            La propiedad antisimétrica del orden dice que si cada uno es
+            menor o igual que el otro, entonces son iguales. Por tanto,
+            <m>|a|=|b|</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Como <m>a\mid b</m>, existe <m>k\in\mathbb Z</m> tal que
+            <m>b=ak</m>. Puesto que <m>b\ne 0</m>, se tiene <m>k\ne 0</m>,
+            así que <m>|k|\ge 1</m>. Luego
+            <m>|b|=|a||k|\ge |a|</m>, y por tanto <m>|a|\le |b|</m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
   </proposition>
+
+  <theorem xml:id="algoritmo-de-la-division">
+    <title>Algoritmo de la división</title>
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m>, con <m>b\ne 0</m>. Existen únicos
+        <m>q,r\in\mathbb Z</m> tales que
+        <m>a=bq+r</m> y <m>0\le r\lt |b|</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>d=|b|</m>, de modo que <m>d>0</m>. Consideremos el conjunto
+        de enteros no negativos de la forma <m>a-dk</m>, con
+        <m>k\in\mathbb Z</m>. Este conjunto no es vacío: tomando
+        <m>k=-|a|</m> obtenemos <m>a+d|a|\ge 0</m>. Por el principio del
+        buen orden, el conjunto tiene un elemento mínimo <m>r=a-dq</m>
+        para algún <m>q\in\mathbb Z</m>. Así, <m>a=dq+r</m> y <m>r\ge 0</m>.
+        Además, <m>r\lt d</m>, pues si <m>r\ge d</m>, entonces
+        <m>r-d=a-d(q+1)</m> sería un elemento no negativo del conjunto
+        menor que <m>r</m>, contradiciendo su minimalidad.
+      </p>
+      <p>
+        Si <m>b>0</m>, entonces <m>d=b</m> y ya tenemos la representación
+        deseada.         Si <m>b\lt 0</m>, entonces <m>b=-d</m>; tomando
+        <m>Q=-q</m>, se obtiene <m>a=bQ+r</m>. En ambos casos existe una
+        representación con <m>0\le r\lt |b|</m>.
+      </p>
+      <p>
+        Para probar la unicidad, supongamos que también
+        <m>a=bq_1+r_1</m>, donde <m>0\le r_1\lt |b|</m>. Al restar las dos
+        representaciones,
+        <m>b(q-Q)=r-r_1</m>. El valor absoluto de <m>r-r_1</m> es menor
+        que <m>|b|</m>. Si <m>q\ne Q</m>, el lado izquierdo tendría valor
+        absoluto al menos <m>|b|</m>, una contradicción. Por tanto
+        <m>q=Q</m>, y entonces <m>r=r_1</m>. La representación es única.
+      </p>
+    </proof>
+  </theorem>
 </section>
