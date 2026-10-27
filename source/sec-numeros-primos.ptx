@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="numeros-primos">
+  <title>Números primos</title>
+
+  <definition xml:id="def-numero-primo">
+    <statement>
+      <p>
+        Un entero <m>p>1</m> es primo si sus únicos divisores positivos son
+        <m>1</m> y <m>p</m>. Si tiene otros divisores positivos, se llama
+        compuesto.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-primos">
+    <statement>
+      <p>
+        El número <m>7</m> es primo: sus únicos divisores positivos son
+        <m>1</m> y <m>7</m>. El número <m>8</m> es compuesto, porque
+        <m>2\mid 8</m> y <m>4\mid 8</m>.
+      </p>
+    </statement>
+  </example>
+</section>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-section-name" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Definición y primeros ejemplos</title>
+
+  <definition xml:id="def-grupo">
+    <statement>
+      <p>
+        Un <term>grupo</term> es un conjunto no vacío <m>G</m> junto con una
+        operación <m>*</m> que satisface las siguientes propiedades:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Cerradura:</em> si <m>a,b\in G</m>, entonces <m>a*b\in G</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Asociatividad:</em> para cualesquiera <m>a,b,c\in G</m>,
+            <m>(a*b)*c=a*(b*c)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Elemento identidad:</em> existe <m>e\in G</m> tal que, para
+            todo <m>a\in G</m>, <m>e*a=a*e=a</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Inversos:</em> para cada <m>a\in G</m> existe <m>a^{-1}\in G</m>
+            tal que <m>a*a^{-1}=a^{-1}*a=e</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-enteros-suma">
+    <statement>
+      <p>
+        Los enteros <m>\mathbb Z</m> con la operación de suma forman un grupo.
+        La identidad es <m>0</m> y el inverso de <m>a</m> es <m>-a</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="ejemplo-naturales-suma">
+    <statement>
+      <p>
+        Los números naturales con la suma no forman un grupo: por ejemplo,
+        <m>1</m> no tiene un inverso aditivo que también sea un número natural.
+      </p>
+    </statement>
+  </example>
+
+</section>

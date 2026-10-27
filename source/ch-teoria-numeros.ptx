@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="teoria-de-numeros" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Teoría de números</title>
+
+  <introduction>
+    <p>
+     En este capitulo nos enfocaremos en la estudiar los nuemros enteros y algunas de sus propiedes.
+    </p>
+  </introduction>
+
+  <xi:include href="./sec-divisibilidad.ptx" />
+  <xi:include href="./sec-numeros-primos.ptx" />
+</chapter>

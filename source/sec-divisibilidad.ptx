@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="divisibilidad">
+  <title>Divisibilidad</title>
+
+  <definition xml:id="def-divisibilidad">
+    <statement>
+      <p>
+        Sean <m>a</m> y <m>b</m> enteros, con <m>a\ne 0</m>. Decimos que
+        <m>a</m> divide a <m>b</m> si existe un entero <m>k</m> tal que
+        <m>b=ak</m>. Se escribe <m>a\mid b</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-divisibilidad">
+    <statement>
+      <p>
+        Como <m>18=6\cdot 3</m>, se cumple <m>6\mid 18</m>. En cambio,
+        <m>6</m> no divide a <m>20</m>, porque no existe un entero <m>k</m>
+        para el cual <m>20=6k</m>.
+      </p>
+    </statement>
+  </example>
+
+  <proposition xml:id="propiedades-divisibilidad">
+    <statement>
+      <p>
+        Sean <m>a,b,c,x,y\in\mathbb Z</m>, con <m>a\ne 0</m>. Se cumplen
+        las siguientes propiedades:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>b\mid c</m>, entonces <m>a\mid c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>a\mid c</m>, entonces
+            <m>a\mid (bx+cy)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>|a|\le |b|</m> y <m>|b|\le |a|</m>, entonces
+            <m>|a|=|b|</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>b\ne 0</m>, entonces <m>|a|\le |b|</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </proposition>
+</section>

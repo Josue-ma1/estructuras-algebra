@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Teoría de grupos</title>
+
+  <introduction>
+    <p>
+      En este capítulo estudiaremos los grupos, una de las estructuras
+      fundamentales del álgebra. Comenzaremos con su definición y algunos
+      ejemplos básicos.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-section-name.ptx" />
+
+</chapter>
