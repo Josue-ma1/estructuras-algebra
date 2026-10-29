@@ -61,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "1.2",
   "title": "Números primos",
-  "body": " Números primos    Un entero es primo si sus únicos divisores positivos son y . Si tiene otros divisores positivos, se llama compuesto.      El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .    "
+  "body": " Números primos    Un entero es primo si sus únicos divisores positivos son y . Si tiene otros divisores positivos, se llama compuesto.      El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .      Sean y enteros mayores que . Decimos que y son primos relativos si . En otras palabras, no tienen divisores positivos en común, excepto .    "
 },
 {
   "id": "def-numero-primo",
@@ -80,6 +80,15 @@ var ptx_lunr_docs = [
   "number": "1.2.2",
   "title": "",
   "body": "  El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .   "
+},
+{
+  "id": "teorema-primos",
+  "level": "2",
+  "url": "numeros-primos.html#teorema-primos",
+  "type": "Teorema",
+  "number": "1.2.3",
+  "title": "",
+  "body": "  Sean y enteros mayores que . Decimos que y son primos relativos si . En otras palabras, no tienen divisores positivos en común, excepto .   "
 },
 {
   "id": "sec-section-name",
