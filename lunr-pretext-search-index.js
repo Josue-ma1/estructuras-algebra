@@ -97,7 +97,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "2.1",
   "title": "Definición y primeros ejemplos",
-  "body": " Definición y primeros ejemplos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        El conjunto de los enteros es un grupo.    La suma de enteros es un entero. La identidad es el número , y el inverso de un entero es su opuesto .      El conjunto de los números racionales es un grupo.      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.      Si para todo , decimos que el grupo es abeliano o conmutativo .    "
+  "body": " Definición y primeros ejemplos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .    Hola    El conjunto de los números racionales es un grupo.      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.      Si para todo , decimos que el grupo es abeliano o conmutativo .    "
 },
 {
   "id": "def-grupo",
@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Ejemplo",
   "number": "2.1.2",
   "title": "",
-  "body": "  El conjunto de los enteros es un grupo.    La suma de enteros es un entero. La identidad es el número , y el inverso de un entero es su opuesto .   "
+  "body": "  El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .   "
 },
 {
   "id": "ejemplo-racionales-suma",
