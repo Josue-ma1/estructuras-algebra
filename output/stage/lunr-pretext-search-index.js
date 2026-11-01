@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "1.1",
   "title": "Divisibilidad",
-  "body": " Divisibilidad    Sean y enteros, con . Decimos que divide a si existe un entero tal que . Se escribe .      Como , se cumple . En cambio, no divide a , porque no existe un entero para el cual .      Sean , con . Se cumplen las siguientes propiedades:    Si y , entonces .    Si y , entonces .    Si y , entonces .    Si y , entonces .        Como , existe tal que . Como , existe tal que . Por tanto, . Puesto que , implica que .    De y existen tales que y . Entonces . Como , se concluye que .    Los números y son enteros no negativos. La propiedad antisimétrica del orden dice que si cada uno es menor o igual que el otro, entonces son iguales. Por tanto, .    Como , existe tal que . Puesto que , se tiene , así que . Luego , y por tanto .       Algoritmo de la división   Sean , con . Existen únicos tales que y .    Sea , de modo que . Consideremos el conjunto de enteros no negativos de la forma , con . Este conjunto no es vacío: tomando obtenemos . Por el principio del buen orden, el conjunto tiene un elemento mínimo para algún . Así, y . Además, , pues si , entonces sería un elemento no negativo del conjunto menor que , contradiciendo su minimalidad.  Si , entonces y ya tenemos la representación deseada. Si , entonces ; tomando , se obtiene . En ambos casos existe una representación con .  Para probar la unicidad, supongamos que también , donde . Al restar las dos representaciones, . El valor absoluto de es menor que . Si , el lado izquierdo tendría valor absoluto al menos , una contradicción. Por tanto , y entonces . La representación es única.    "
+  "body": " Divisibilidad    Sean y enteros, con . Decimos que divide a si existe un entero tal que . Se escribe .      Como , se cumple . En cambio, no divide a , porque no existe un entero para el cual .      Sean , con . Se cumplen las siguientes propiedades:    Si y , entonces .    Si y , entonces .    Si y , entonces .    Si y , entonces .        Como , existe tal que . Como , existe tal que . Por tanto, . Puesto que , implica que .    De y existen tales que y . Entonces . Como , se concluye que .    Los números y son enteros no negativos. La propiedad antisimétrica del orden dice que si cada uno es menor o igual que el otro, entonces son iguales. Por tanto, .    Como , existe tal que . Puesto que , se tiene , así que . Luego , y por tanto .       Algoritmo de la división   Sean , con . Existen únicos tales que y .    Consideremos el conjunto . Este conjunto no es vacío, pues por la propiedad arquimediana existe tal que . Por el principio del buen orden, tiene un elemento mínimo para algún . Así, y . Además, , pues, si , entonces , pero , lo cual contradice la minimalidad de .  Si , entonces , y tomando obtenemos . Si , entonces , y tomando obtenemos . Por tanto, en ambos casos existe una representación , donde .  Para probar la unicidad, supongamos que existen tales que y , con . Al restar ambas representaciones, obtenemos . Como , se tiene . Si , entonces y, por tanto, , lo cual contradice . En consecuencia, . Sustituyendo en la igualdad anterior, obtenemos . Por tanto, la representación es única.    "
 },
 {
   "id": "def-divisibilidad",
@@ -52,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Teorema",
   "number": "1.1.4",
   "title": "Algoritmo de la división.",
-  "body": " Algoritmo de la división   Sean , con . Existen únicos tales que y .    Sea , de modo que . Consideremos el conjunto de enteros no negativos de la forma , con . Este conjunto no es vacío: tomando obtenemos . Por el principio del buen orden, el conjunto tiene un elemento mínimo para algún . Así, y . Además, , pues si , entonces sería un elemento no negativo del conjunto menor que , contradiciendo su minimalidad.  Si , entonces y ya tenemos la representación deseada. Si , entonces ; tomando , se obtiene . En ambos casos existe una representación con .  Para probar la unicidad, supongamos que también , donde . Al restar las dos representaciones, . El valor absoluto de es menor que . Si , el lado izquierdo tendría valor absoluto al menos , una contradicción. Por tanto , y entonces . La representación es única.   "
+  "body": " Algoritmo de la división   Sean , con . Existen únicos tales que y .    Consideremos el conjunto . Este conjunto no es vacío, pues por la propiedad arquimediana existe tal que . Por el principio del buen orden, tiene un elemento mínimo para algún . Así, y . Además, , pues, si , entonces , pero , lo cual contradice la minimalidad de .  Si , entonces , y tomando obtenemos . Si , entonces , y tomando obtenemos . Por tanto, en ambos casos existe una representación , donde .  Para probar la unicidad, supongamos que existen tales que y , con . Al restar ambas representaciones, obtenemos . Como , se tiene . Si , entonces y, por tanto, , lo cual contradice . En consecuencia, . Sustituyendo en la igualdad anterior, obtenemos . Por tanto, la representación es única.   "
 },
 {
   "id": "numeros-primos",
@@ -61,7 +61,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "1.2",
   "title": "Números primos",
-  "body": " Números primos    Un entero es primo si sus únicos divisores positivos son y . Si tiene otros divisores positivos, se llama compuesto.      El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .    "
+  "body": " Números primos    Un entero es primo si sus únicos divisores positivos son y . Si tiene otros divisores positivos, se llama compuesto.      El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .      Sean y enteros mayores que . Decimos que y son primos relativos si . En otras palabras, no tienen divisores positivos en común, excepto .    "
 },
 {
   "id": "def-numero-primo",
@@ -82,13 +82,22 @@ var ptx_lunr_docs = [
   "body": "  El número es primo: sus únicos divisores positivos son y . El número es compuesto, porque y .   "
 },
 {
+  "id": "teorema-primos",
+  "level": "2",
+  "url": "numeros-primos.html#teorema-primos",
+  "type": "Teorema",
+  "number": "1.2.3",
+  "title": "",
+  "body": "  Sean y enteros mayores que . Decimos que y son primos relativos si . En otras palabras, no tienen divisores positivos en común, excepto .   "
+},
+{
   "id": "sec-section-name",
   "level": "1",
   "url": "sec-section-name.html",
   "type": "Sección",
   "number": "2.1",
   "title": "Definición y primeros ejemplos",
-  "body": " Definición y primeros ejemplos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        Los enteros con la operación de suma forman un grupo. La identidad es y el inverso de es .      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.    "
+  "body": " Definición y primeros ejemplos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .      El conjunto de los números racionales es un grupo.      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.      Si para todo , decimos que el grupo es abeliano o conmutativo .    "
 },
 {
   "id": "def-grupo",
@@ -106,16 +115,34 @@ var ptx_lunr_docs = [
   "type": "Ejemplo",
   "number": "2.1.2",
   "title": "",
-  "body": "  Los enteros con la operación de suma forman un grupo. La identidad es y el inverso de es .   "
+  "body": "  El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .   "
+},
+{
+  "id": "ejemplo-racionales-suma",
+  "level": "2",
+  "url": "sec-section-name.html#ejemplo-racionales-suma",
+  "type": "Ejemplo",
+  "number": "2.1.3",
+  "title": "",
+  "body": "  El conjunto de los números racionales es un grupo.   "
 },
 {
   "id": "ejemplo-naturales-suma",
   "level": "2",
   "url": "sec-section-name.html#ejemplo-naturales-suma",
   "type": "Ejemplo",
-  "number": "2.1.3",
+  "number": "2.1.4",
   "title": "",
   "body": "  Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.   "
+},
+{
+  "id": "def-subgrupo",
+  "level": "2",
+  "url": "sec-section-name.html#def-subgrupo",
+  "type": "Definición",
+  "number": "2.1.5",
+  "title": "",
+  "body": "  Si para todo , decimos que el grupo es abeliano o conmutativo .   "
 },
 {
   "id": "backmatter-2",

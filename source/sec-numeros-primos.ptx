@@ -22,4 +22,15 @@
       </p>
     </statement>
   </example>
+
+  <theorem xml:id="teorema-primos">
+    <statement>
+      <p>
+        Sean <m>a</m> y <m>b</m> enteros mayores que <m>1</m>. Decimos que
+        <m>a</m> y <m>b</m> son primos relativos si
+        <m>\operatorname{mcd}(a,b)=1</m>. En otras palabras, no tienen divisores
+        positivos en común, excepto <m>1</m>.
+      </p>
+    </statement>
+  </theorem>
 </section>

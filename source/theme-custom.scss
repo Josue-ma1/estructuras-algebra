@@ -1,0 +1,39 @@
+@use 'targets/html/default-modern/theme-default-modern' with (
+  $palette: 'blue-green'
+);
+
+article.theorem-like,
+article.definition-like {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.65rem;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+}
+
+article.theorem-like::after,
+article.definition-like::after {
+  display: none;
+}
+
+article.theorem-like > .heading,
+article.definition-like > .heading {
+  background: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.65rem;
+}
+
+article.theorem-like > .heading > .type,
+article.definition-like > .heading > .type,
+details.hiddenproof > summary .type {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+details.hiddenproof > article.knowl__content {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.65rem;
+  padding: 1rem 1.25rem;
+}

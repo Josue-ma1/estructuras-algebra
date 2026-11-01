@@ -105,30 +105,40 @@
     </statement>
     <proof>
       <p>
-        Sea <m>d=|b|</m>, de modo que <m>d>0</m>. Consideremos el conjunto
-        de enteros no negativos de la forma <m>a-dk</m>, con
-        <m>k\in\mathbb Z</m>. Este conjunto no es vacío: tomando
-        <m>k=-|a|</m> obtenemos <m>a+d|a|\ge 0</m>. Por el principio del
-        buen orden, el conjunto tiene un elemento mínimo <m>r=a-dq</m>
-        para algún <m>q\in\mathbb Z</m>. Así, <m>a=dq+r</m> y <m>r\ge 0</m>.
-        Además, <m>r\lt d</m>, pues si <m>r\ge d</m>, entonces
-        <m>r-d=a-d(q+1)</m> sería un elemento no negativo del conjunto
-        menor que <m>r</m>, contradiciendo su minimalidad.
+        Consideremos el conjunto
+        <m>S=\{a-|b|k:k\in\mathbb Z\text{ y }a-|b|k\ge 0\}</m>.
+        Este conjunto no es vacío, pues por la propiedad arquimediana existe
+        <m>n\in\mathbb Z</m> tal que <m>a+|b|n\ge 0</m>.
+        Por el principio del buen orden, <m>S</m> tiene un elemento mínimo
+        <m>r=a-|b|q</m> para algún <m>q\in\mathbb Z</m>.
+        Así, <m>a=|b|q+r</m> y <m>r\ge 0</m>.
+        Además, <m>r\lt |b|</m>, pues, si <m>r\ge |b|</m>, entonces
+        <m>0\le r-|b|=a-|b|(q+1)\in S</m>, pero
+        <m>r-|b|\lt r</m>, lo cual contradice la minimalidad de <m>r</m>.
       </p>
       <p>
-        Si <m>b>0</m>, entonces <m>d=b</m> y ya tenemos la representación
-        deseada.         Si <m>b\lt 0</m>, entonces <m>b=-d</m>; tomando
-        <m>Q=-q</m>, se obtiene <m>a=bQ+r</m>. En ambos casos existe una
-        representación con <m>0\le r\lt |b|</m>.
+        Si <m>b>0</m>, entonces <m>|b|=b</m>, y tomando
+        <m>Q=q</m> obtenemos <m>a=bQ+r</m>.
+        Si <m>b\lt 0</m>, entonces <m>|b|=-b</m>, y tomando
+        <m>Q=-q</m> obtenemos <m>a=bQ+r</m>.
+        Por tanto, en ambos casos existe una representación
+        <m>a=bQ+r</m>, donde <m>0\le r\lt |b|</m>.
       </p>
       <p>
-        Para probar la unicidad, supongamos que también
-        <m>a=bq_1+r_1</m>, donde <m>0\le r_1\lt |b|</m>. Al restar las dos
-        representaciones,
-        <m>b(q-Q)=r-r_1</m>. El valor absoluto de <m>r-r_1</m> es menor
-        que <m>|b|</m>. Si <m>q\ne Q</m>, el lado izquierdo tendría valor
-        absoluto al menos <m>|b|</m>, una contradicción. Por tanto
-        <m>q=Q</m>, y entonces <m>r=r_1</m>. La representación es única.
+        Para probar la unicidad, supongamos que existen
+        <m>q,r,Q,R\in\mathbb Z</m> tales que
+        <m>a=bq+r</m> y <m>a=bQ+R</m>, con
+        <m>0\le r,R\lt |b|</m>.
+        Al restar ambas representaciones, obtenemos
+        <m>b(q-Q)=R-r</m>.
+        Como <m>0\le r,R\lt |b|</m>, se tiene
+        <m>-|b|\lt R-r\lt |b|</m>.
+        Si <m>q\ne Q</m>, entonces <m>|q-Q|\ge 1</m> y, por tanto,
+        <m>|b(q-Q)|\ge |b|</m>, lo cual contradice
+        <m>|R-r|\lt |b|</m>.
+        En consecuencia, <m>q=Q</m>. Sustituyendo en la igualdad
+        anterior, obtenemos <m>r=R</m>. Por tanto, la representación
+        es única.
       </p>
     </proof>
   </theorem>
