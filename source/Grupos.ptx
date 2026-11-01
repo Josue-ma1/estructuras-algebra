@@ -81,36 +81,5 @@
     </statement>
   </definition>
 
-  <figure xml:id="fig-grafica-x-cuadrada">
-    <caption>Gráfica de la función <m>y=x^2</m> en el intervalo <m>[0,1]</m>.</caption>
-    <image source="images/grafica-x-cuadrada.svg">
-      <description>
-        <p>
-          La curva <m>y=x^2</m> va desde el origen hasta el punto
-          <m>(1,1)</m> y crece de manera continua para <m>0\leq x\leq 1</m>.
-        </p>
-      </description>
-    </image>
-  </figure>
-
-  <figure xml:id="fig-plano-tangente">
-    <caption>
-      Plano tangente y vectores velocidad sobre una superficie.
-      Figura reproducida de RELCALC-3, licencia CC BY-NC-SA 4.0.
-    </caption>
-    <image xml:id="asy-plano-tangente">
-      <description>
-        <p>
-          Una superficie con un punto P sub cero, dos curvas que pasan por
-          ese punto, sus vectores velocidad y el plano tangente que estos
-          generan.
-        </p>
-      </description>
-      <asymptote>
-        <xi:include parse="text" href="asy/commun-3d.asy"/>
-        <xi:include parse="text" href="asy/plan-tangent-vitesses.asy"/>
-      </asymptote>
-    </image>
-  </figure>
-
+  <p> hola<p>
 </section>
