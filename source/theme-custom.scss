@@ -2,38 +2,239 @@
   $palette: 'blue-green'
 );
 
-article.theorem-like,
-article.definition-like {
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.65rem;
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
+:root {
+  --box-color: #1f8a7a;
+  --box-dark: #176b5e;
+  --box-soft: #eef7f5;
 }
 
+/* ===== Página general ===== */
+
+body {
+  background: #f6f8f8 !important;
+}
+
+.ptx-content {
+  background: transparent !important;
+}
+
+.ptx-content .content {
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.ptx-content p {
+  margin: 0 0 1.1rem 0;
+}
+
+.ptx-content h1.heading,
+.ptx-content h2.heading,
+.ptx-content h3.heading,
+.ptx-content h4.heading {
+  color: var(--box-color) !important;
+  letter-spacing: 0.01em;
+}
+
+.ptx-content h1.heading {
+  border-bottom: 2px solid var(--box-color) !important;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.ptx-content h2.heading,
+.ptx-content h3.heading {
+  margin-top: 2.5rem;
+}
+
+.ptx-content a {
+  color: var(--box-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.ptx-content a:hover {
+  color: var(--box-dark);
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Barra superior ===== */
+
+.ptx-navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #dbe7e5 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+
+.ptx-navbar .button,
+.ptx-navbar a,
+.ptx-navbar button {
+  color: var(--box-color) !important;
+}
+
+/* ===== Índice lateral (acordeón original, solo colores) ===== */
+
+/* Capítulos y secciones principales: fondo oscuro */
+.ptx-sidebar .toc-item-list > .toc-item > .toc-title-box,
+.ptx-sidebar .toc-item-list > .toc-item > .toc-title-box a {
+  background: var(--box-dark) !important;
+  color: #ffffff !important;
+}
+
+/* Subsecciones: fondo blanco */
+.ptx-sidebar .toc-item-list .toc-item-list .toc-title-box {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--box-color) !important;
+}
+
+.ptx-sidebar .toc-item-list .toc-item-list .toc-title-box a {
+  background: transparent !important;
+  color: var(--box-dark) !important;
+}
+
+/* Subsección activa */
+.ptx-sidebar .toc-item-list .toc-item-list .toc-item.active > .toc-title-box,
+.ptx-sidebar .toc-item-list .toc-item-list .toc-item.active > .toc-title-box a {
+  background: var(--box-color) !important;
+  color: #ffffff !important;
+}
+
+.ptx-sidebar .toc-title-box:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Teoremas y definiciones ===== */
+
+article.theorem-like,
+article.definition-like,
+article.example-like,
+article.remark-like {
+  background: #fcfcfc !important;
+  border: 1px solid var(--box-color) !important;
+  border-left: 1px solid var(--box-color) !important;
+  border-radius: 0.65rem !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+  margin: 1.75rem 0 !important;
+  padding: 1rem 1.5rem 1.25rem !important;
+}
+
+article.theorem-like::before,
 article.theorem-like::after,
+article.definition-like::before,
 article.definition-like::after {
-  display: none;
+  content: none !important;
+  display: none !important;
+  border: none !important;
 }
 
 article.theorem-like > .heading,
 article.definition-like > .heading {
-  background: transparent;
-  border-bottom: 1px solid var(--primary-color);
-  margin-bottom: 0.9rem;
-  padding-bottom: 0.65rem;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
-article.theorem-like > .heading > .type,
-article.definition-like > .heading > .type,
-details.hiddenproof > summary .type {
-  color: var(--primary-color);
-  font-weight: 700;
+article.theorem-like > .heading::before,
+article.theorem-like > .heading::after,
+article.definition-like > .heading::before,
+article.definition-like > .heading::after,
+article.theorem-like > .heading > *::before,
+article.theorem-like > .heading > *::after,
+article.definition-like > .heading > *::before,
+article.definition-like > .heading > *::after {
+  content: none !important;
+  display: none !important;
+  border: none !important;
+  background: none !important;
 }
+
+article.theorem-like > .heading *,
+article.definition-like > .heading *,
+details.hiddenproof > summary .type {
+  color: var(--box-color) !important;
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+}
+
+article.theorem-like > .heading + *,
+article.definition-like > .heading + * {
+  border-top: none !important;
+  text-decoration: none !important;
+}
+
+/* ===== Demostraciones ===== */
 
 details.hiddenproof > article.knowl__content {
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  border-radius: 0.65rem;
-  padding: 1rem 1.25rem;
+  background: transparent !important;
+  border: 1px solid var(--box-color) !important;
+  border-radius: 0.65rem !important;
+  box-shadow: none !important;
+  padding: 1rem 1.5rem !important;
+}
+
+article.proof {
+  border-left: 3px solid var(--box-color);
+  padding-left: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+article.proof > .heading .type {
+  color: var(--box-color);
+  font-style: italic;
+}
+
+/* ===== Desplegables (Ejemplo, Observación) ===== */
+
+details > summary .type,
+details > summary .codenumber,
+details > summary .title {
+  color: var(--box-color) !important;
+}
+
+/* ===== Fórmulas, listas y tablas ===== */
+
+.ptx-content .displaymath {
+  margin: 1.5rem 0;
+}
+
+.ptx-content ol,
+.ptx-content ul {
+  padding-left: 1.75rem;
+}
+
+.ptx-content li {
+  margin-bottom: 0.45rem;
+}
+
+.ptx-content table {
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+}
+
+.ptx-content table th,
+.ptx-content table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #d8e6e3;
+}
+
+.ptx-content table th {
+  color: var(--box-color);
+  border-bottom: 2px solid var(--box-color);
+}
+/* ===== Índice: mostrar siempre todas las subsecciones ===== */
+
+.ptx-sidebar .toc-item-list .toc-item-list,
+.ptx-sidebar .toc-item > .toc-item-list,
+.ptx-sidebar .toc-item.contains-active > .toc-item-list {
+  display: block !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
