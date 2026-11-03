@@ -91,6 +91,60 @@ var ptx_lunr_docs = [
   "body": "  Sean y enteros mayores que . Decimos que y son primos relativos si . En otras palabras, no tienen divisores positivos en común, excepto .   "
 },
 {
+  "id": "congruencia",
+  "level": "1",
+  "url": "congruencia.html",
+  "type": "Sección",
+  "number": "1.3",
+  "title": "Congruencia modulo n",
+  "body": " Congruencia modulo n    Sean y sea un entero positivo. Decimos que es congruente con módulo si . Escribimos .      Como , se cumple . En cambio, , pues no divide a .     (La congruencia es una relación de equivalencia)   La relación de congruencia modulo es una relación de equivalencia en . Es decir, para cualesquiera :     (reflexividad).    Si , entonces (simetría).    Si y , entonces (transitividad).        Como , se tiene . Por la definición de congruencia, .    Supongamos que . Entonces , así que existe tal que . Por tanto, . Como , , y por la definición de congruencia, .    Supongamos que y . Existen tales que y . Al sumar estas igualdades, obtenemos . Como , , y por tanto .        El conjunto de todas las clases de equivalencia de la relación de congruencia módulo se denota por .      El conjunto .    Sea . Por el algoritmo de la división, existen enteros con tales que . Entonces , así que , y por la definición de congruencia, . Por lo tanto, cada clase de equivalencia es igual a una de las clases .    "
+},
+{
+  "id": "def-congruencia",
+  "level": "2",
+  "url": "congruencia.html#def-congruencia",
+  "type": "Definición",
+  "number": "1.3.1",
+  "title": "",
+  "body": "  Sean y sea un entero positivo. Decimos que es congruente con módulo si . Escribimos .   "
+},
+{
+  "id": "ejemplo-congruencia",
+  "level": "2",
+  "url": "congruencia.html#ejemplo-congruencia",
+  "type": "Ejemplo",
+  "number": "1.3.2",
+  "title": "",
+  "body": "  Como , se cumple . En cambio, , pues no divide a .   "
+},
+{
+  "id": "congruencia-es-relacion-de-equivalencia",
+  "level": "2",
+  "url": "congruencia.html#congruencia-es-relacion-de-equivalencia",
+  "type": "Proposición",
+  "number": "1.3.3",
+  "title": "(La congruencia es una relación de equivalencia).",
+  "body": " (La congruencia es una relación de equivalencia)   La relación de congruencia modulo es una relación de equivalencia en . Es decir, para cualesquiera :     (reflexividad).    Si , entonces (simetría).    Si y , entonces (transitividad).        Como , se tiene . Por la definición de congruencia, .    Supongamos que . Entonces , así que existe tal que . Por tanto, . Como , , y por la definición de congruencia, .    Supongamos que y . Existen tales que y . Al sumar estas igualdades, obtenemos . Como , , y por tanto .     "
+},
+{
+  "id": "def-Z_n",
+  "level": "2",
+  "url": "congruencia.html#def-Z_n",
+  "type": "Definición",
+  "number": "1.3.4",
+  "title": "",
+  "body": "  El conjunto de todas las clases de equivalencia de la relación de congruencia módulo se denota por .   "
+},
+{
+  "id": "thm-Z_n",
+  "level": "2",
+  "url": "congruencia.html#thm-Z_n",
+  "type": "Teorema",
+  "number": "1.3.5",
+  "title": "",
+  "body": "  El conjunto .    Sea . Por el algoritmo de la división, existen enteros con tales que . Entonces , así que , y por la definición de congruencia, . Por lo tanto, cada clase de equivalencia es igual a una de las clases .   "
+},
+{
   "id": "sec-section-name",
   "level": "1",
   "url": "sec-section-name.html",
