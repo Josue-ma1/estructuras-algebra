@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="congruencia">
+  <title>Congruencia modulo n</title>
+
+  <definition xml:id="def-congruencia">
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m> y sea <m>n</m> un entero positivo.
+        Decimos que <m>a</m> es congruente con <m>b</m> módulo <m>n</m> si
+        <m>n\mid(a-b)</m>. Escribimos <m>a\equiv b\pmod n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-congruencia">
+    <statement>
+      <p>
+        Como <m>6\mid(17-5)</m>, se cumple
+        <m>17\equiv 5\pmod 6</m>. En cambio,
+        <m>17\not\equiv 4\pmod 6</m>, pues <m>6</m> no divide a
+        <m>17-4=13</m>.
+      </p>
+    </statement>
+  </example>
+  <proposition xml:id="congruencia-es-relacion-de-equivalencia">
+    <title>(La congruencia es una relación de equivalencia)</title>
+    <statement>
+      <p> La relación de congruencia modulo <m>n</m> es una relación de equivalencia en
+        <m>\mathbb Z</m>.
+        Es decir, para
+        cualesquiera <m>a,b,c\in\mathbb Z</m>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>a\equiv a\pmod n</m> (reflexividad).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\equiv b\pmod n</m>, entonces
+            <m>b\equiv a\pmod n</m> (simetría).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\equiv b\pmod n</m> y <m>b\equiv c\pmod n</m>, entonces
+            <m>a\equiv c\pmod n</m> (transitividad).
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Como <m>a-a=0=n\cdot 0</m>, se tiene <m>n\mid(a-a)</m>.
+            Por la definición de congruencia, <m>a\equiv a\pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supongamos que <m>a\equiv b\pmod n</m>. Entonces
+            <m>n\mid(a-b)</m>, así que existe <m>k\in\mathbb Z</m> tal que
+            <m>a-b=nk</m>. Por tanto,
+            <m>b-a=-nk=n(-k)</m>. Como <m>-k\in\mathbb Z</m>,
+            <m>n\mid(b-a)</m>, y por la definición de congruencia,
+            <m>b\equiv a\pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supongamos que <m>a\equiv b\pmod n</m> y
+            <m>b\equiv c\pmod n</m>. Existen <m>r,s\in\mathbb Z</m> tales
+            que <m>a-b=nr</m> y <m>b-c=ns</m>. Al sumar estas igualdades,
+            obtenemos <m>a-c=n(r+s)</m>. Como <m>r+s\in\mathbb Z</m>,
+            <m>n\mid(a-c)</m>, y por tanto <m>a\equiv c\pmod n</m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <definition xml:id="def-Z_n">
+    <statement>
+      <p>
+        El conjunto de todas las clases de equivalencia de la relación de congruencia módulo <m>n</m>
+        se denota por <m>\mathbb Z_n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="thm-Z_n">
+    <statement>
+      <p>
+        El conjunto <m>\mathbb Z_n = \{[0],[1],\ldots,[n-1]\}</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>a\in\mathbb Z</m>. Por el algoritmo de la división, existen
+        enteros <m>q,r</m> con <m>0\le r&lt;n</m> tales que
+        <m>a=nq+r</m>. Entonces <m>a-r=nq</m>, así que
+        <m>n\mid(a-r)</m>, y por la definición de congruencia,
+        <m>a\equiv r\pmod n</m>. Por lo tanto, cada clase de equivalencia
+        <m>[a]</m> es igual a una de las clases
+        <m>[0],[1],\ldots,[n-1]</m>.
+      </p>
+    </proof>
+  </theorem>
+</section>

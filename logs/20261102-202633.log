@@ -1,0 +1,13 @@
+INFO    : Building target web
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/josue/estructuras-algebra/source/congruencia.ptx: Opening and ending tag mismatch: section line 3 and p, line 29, column 8 (congruencia.ptx, line 29)
+ERROR   : Error assembling source file: Opening and ending tag mismatch: section line 3 and p, line 29, column 8 (congruencia.ptx, line 29)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+exit    : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

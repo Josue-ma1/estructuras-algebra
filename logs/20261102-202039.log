@@ -1,0 +1,13 @@
+INFO    : Building target web
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error loading /home/josue/estructuras-algebra/source/congruencia.ptx: Document is empty, line 1, column 1 (congruencia.ptx, line 1)
+ERROR   : Error assembling source file: Document is empty, line 1, column 1 (congruencia.ptx, line 1)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+exit    : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------
