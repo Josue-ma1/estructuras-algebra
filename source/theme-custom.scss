@@ -4,8 +4,8 @@
 
 :root {
   --box-color: #1292e7;
-  --box-dark: #c1f3e4;
-  --box-soft: #bb1d1d;
+  --box-dark: #ffffff;
+  --box-soft: #ffffff;
 }
 
 /* ===== Página general ===== */
@@ -45,7 +45,7 @@ body {
   content: "Grupos, anillos, campos y teoría de Galois";
   display: block;
   margin: 3rem auto 4rem;
-  color: #000000;
+  color: #046ef8;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.25rem, 5vw, 2.5rem);
   font-style: italic;
