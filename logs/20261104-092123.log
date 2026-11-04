@@ -1,0 +1,43 @@
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Building theme for target 'web'
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /home/josue/estructuras-algebra/source
+INFO    : Building custom css theme: theme-custom
+ERROR   : ✘ [ERROR] Could not resolve "../../../external/reticulo-subgrupos-s3.svg"
+
+    source/theme-custom.scss:5204:18:
+      5204 │ ...ound: url("../../../external/reticulo-subgrupos-s3.svg") cent...
+           ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1 error
+/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:1467
+  let error = new Error(text);
+              ^
+
+Error: Build failed with 1 error:
+source/theme-custom.scss:5204:18: ERROR: Could not resolve "../../../external/reticulo-subgrupos-s3.svg"
+    at failureErrorWithLog (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:1467:15)
+    at /home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:924:7)
+    at /home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:935:54)
+    at handleRequest (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:628:17)
+    at handleIncomingPacket (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:653:7)
+    at Socket.readFromStdout (/home/josue/.ptx/2.56.1/core/script/cssbuilder/node_modules/esbuild/lib/main.js:581:7) {
+  errors: [Getter/Setter],
+  warnings: [Getter/Setter]
+}
+
+Node.js v18.19.1
+
+ERROR   : Failed to build theme: Failed to build custom theme
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

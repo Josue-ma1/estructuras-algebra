@@ -1,0 +1,156 @@
+Validation Report
+=================
+
+Three examinations have been made of an assembled version of
+your source:
+
+  (1) "jing" checked conformance with the development RELAX-NG
+      schema at
+      /home/josue/.ptx/2.56.1/core/schema/pretext-dev.rng
+      (a schema can only describe parent-child relationships,
+      plus the attributes of each element)
+  (2) a second "jing" run, against the production schema at
+      /home/josue/.ptx/2.56.1/core/schema/pretext.rng
+      surveyed the experimental constructs in use; that section
+      of this report begins with a fuller explanation
+  (3) the PreTeXt "validation-plus" stylesheet made checks that
+      no RELAX-NG schema could ever express, and offers extra
+      advice and explanation besides
+
+Locations refer to the ASSEMBLED version of your source: your
+modular source files have been knitted together, and any version
+support has been applied (as elected by a "version" element
+within the "source" element of the publication file you
+supplied).  In particular, an element excluded from the version
+being built cannot raise a message here.  The assembled source
+has been deposited at
+    /home/josue/estructuras-algebra/logs/main-assembled.xml
+
+Each message locates its problem four ways, and then names
+the check that raised it:
+
+    file:   the source file where the problem lies
+    path:   the location within the assembled source
+    line:   the line number within the assembled source
+    text:   an excerpt of the offending content
+    check:  a short name for the check ("schema" for a message
+            from "jing", "experimental" for the survey of
+            experimental constructs)
+
+Only "file" points into your own source files.  In particular,
+"line" is a line number of the deposited assembled source named
+above, never of one of your files.
+
+To read a "path", count elements of each name.  For example,
+
+    /pretext/book/chapter[7]/section[2]/p[13]/em[2]
+
+is the second "em" within the thirteenth "p" (paragraph) of the
+second "section" of the seventh "chapter" of the book.  Counts
+are of elements with the same name: that paragraph is the
+thirteenth "p" of its section, though other elements may precede
+it or intervene.  An element without a count, like the "book"
+above, is the only element of that name at its location, so a
+count would just be clutter.
+
+
+======================================================================
+Messages: RELAX-NG schema validation, from "jing"
+======================================================================
+
+error: <image> is not allowed here.
+    file: frontmatter.ptx
+    path: /pretext/book/frontmatter/titlepage/titlepage-items/image
+    line: 71
+    text: <image source="reticulo-subgrupos-s3.svg" width="70%">
+    check: schema
+
+error: <ol> is not allowed here.
+    file: sec-divisibilidad.ptx
+    path: /pretext/book/chapter[1]/section[1]/proposition/statement/ol
+    line: 126
+    text: <ol>
+    check: schema
+
+error: <ol> is not allowed here.
+    file: sec-divisibilidad.ptx
+    path: /pretext/book/chapter[1]/section[1]/proposition/proof/ol
+    line: 152
+    text: <ol>
+    check: schema
+
+error: Missing required content. Expected one of: <p>, <blockquote>, <pre>, <image>, <video>, <audio>, <program>, <console>, <tabular>, <figure>, <table>, <listing>, … (11 more).
+    file: sec-divisibilidad.ptx
+    path: /pretext/book/chapter[1]/section[1]/proposition/proof/ol/li[4]/p/m[8]
+    line: 188
+    text: </proof>
+    check: schema
+
+error: Missing required content. Expected one of: <p>, <blockquote>, <pre>, <image>, <video>, <audio>, <program>, <console>, <tabular>, <figure>, <table>, <listing>, … (11 more).
+    file: sec-divisibilidad.ptx
+    path: /pretext/book/chapter[1]/section[1]/proposition/proof/ol/li[4]/p/m[8]
+    line: 188
+    text: </proof>
+    check: schema
+
+error: <ol> is not allowed here.
+    file: congruencia.ptx
+    path: /pretext/book/chapter[1]/section[3]/proposition/statement/ol
+    line: 365
+    text: <ol>
+    check: schema
+
+error: <ol> is not allowed here.
+    file: congruencia.ptx
+    path: /pretext/book/chapter[1]/section[3]/proposition/proof/ol
+    line: 386
+    text: <ol>
+    check: schema
+
+error: Missing required content. Expected one of: <p>, <blockquote>, <pre>, <image>, <video>, <audio>, <program>, <console>, <tabular>, <figure>, <table>, <listing>, … (11 more).
+    file: congruencia.ptx
+    path: /pretext/book/chapter[1]/section[3]/proposition/proof/ol/li[3]/p/m[9]
+    line: 413
+    text: </proof>
+    check: schema
+
+error: Missing required content. Expected one of: <p>, <blockquote>, <pre>, <image>, <video>, <audio>, <program>, <console>, <tabular>, <figure>, <table>, <listing>, … (11 more).
+    file: congruencia.ptx
+    path: /pretext/book/chapter[1]/section[3]/proposition/proof/ol/li[3]/p/m[9]
+    line: 413
+    text: </proof>
+    check: schema
+
+error: <ol> is not allowed here.
+    file: Grupos.ptx
+    path: /pretext/book/chapter[2]/section/definition[1]/statement/ol
+    line: 466
+    text: <ol>
+    check: schema
+
+======================================================================
+Messages: experimental constructs in use
+======================================================================
+
+Constructs reported here are part of the development schema, but
+not the production schema.  They are experimental: their markup
+may change at any time, without the usual deprecation cycle and
+automatic conversion of your source.  So this section is not a
+list of errors -- it is an inventory of the places where your
+source relies on experimental parts of the PreTeXt vocabulary,
+so you can weigh the risk, and recognize the cause if one of
+these constructs changes underneath you.
+
+One caution: while genuine errors remain (the previous section),
+the two schema examinations may recover from an error in
+different ways, and then a few entries here can be echoes of
+those errors, rather than experimental constructs.  Once the
+previous section is clean, this inventory is exact.
+
+(no messages: no experimental constructs are in use)
+
+======================================================================
+Messages: PreTeXt "validation-plus" stylesheet
+======================================================================
+
+(no messages)

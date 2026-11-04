@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:pi="http://pretextbook.org/2020/pretext/internal" xml:lang="es-ES">
+  <!-- we first include a file which contains the docinfo element: -->
+  <docinfo xmlns:ns0="http://pretextbook.org/2020/pretext/internal">
+  <!-- A unique name for the book in a catalog; for example, see https://pretextbook.org/catalog.html and https://runestone.academy/ns/books/index. It contains a simple lowercase string with no dashes or other special characters. See https://pretextbook.org/doc/guide/html/sec-publishing-to-runestone-academy.html for more information. -->
+  <!--<document-id>changeme</document-id>-->
+  <!-- A brief description for the book in a catalog; see the links above. The @shelf is used only when publishing to Runestone; see https://runestone.academy/ns/books/index for a list of valid values. You must copy these @shelf names exactly, including capitalization. -->
+  <!--<blurb shelf="AP Computer Science"> A simple string (no markup is allowed) to describe your book. </blurb>-->
+
+  <directories external="../assets"/>
+
+
+  <!-- macros for defining latex math shortcuts. It is good practice -->
+  <!-- to define these semantically, so that the macro relates to what-->
+  <!-- it defines. -->
+  <macros>
+    \newcommand{\N}{\mathbb N}
+    \newcommand{\Z}{\mathbb Z}
+    \newcommand{\Q}{\mathbb Q}
+    \newcommand{\R}{\mathbb R}
+  </macros>
+
+  <!-- If you put any latex-image elements you can include preambles -->
+  <!-- for those in the next element. -->
+  <latex-image-preamble>
+    \usepackage{tikz, pgfplots}
+    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+    \usetikzlibrary{decorations.markings}
+  </latex-image-preamble>
+
+  <!-- It is possible to rename elements: -->
+  <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
+
+  <!-- Specify the default type of cross reference: -->
+  <!-- <cross-references text="type-global" /> -->
+
+
+</docinfo>
+
+  <book xml:id="my-great-book">
+    <title>Estructuras Algebraicas</title>
+    <subtitle>Una introducción a las estructuras algebraicas</subtitle>
+
+    <!-- Include frontmatter -->
+    <frontmatter xmlns:ns0="http://pretextbook.org/2020/pretext/internal" xml:id="frontmatter">
+  <bibinfo>
+  
+    <author>
+      <personname>Josue Macias</personname>
+    </author>
+    <date>
+      <today/>
+    </date>
+
+    <website>
+      <url href="https://pretextbook.org">My Website</url>
+    </website>
+
+    <copyright>
+      <year>2020<ndash/>2024</year>
+      <holder>Josue Macias</holder>
+      <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+      </shortlicense>
+    </copyright>
+  
+  </bibinfo>
+
+  <titlepage>
+    <titlepage-items>
+      <image source="reticulo-subgrupos-s3.svg" width="70%">
+        <description>
+          Retículo de subgrupos de S₃: el grupo S₃ contiene tres subgrupos
+          generados por transposiciones y el subgrupo A₃; todos contienen
+          el subgrupo trivial {e}.
+        </description>
+      </image>
+    </titlepage-items>
+  </titlepage>
+
+  <colophon xml:id="front-colophon">
+    <colophon-items/>
+  </colophon>
+</frontmatter>
+
+    <!-- Include chapters -->
+    <chapter xmlns:ns0="http://pretextbook.org/2020/pretext/internal" xml:id="teoria-de-numeros">
+  <title>Teoría de números</title>
+
+  <introduction>
+    <p>
+      En este capítulo estudiaremos los números enteros y algunas de sus
+      propiedades.
+    </p>
+  </introduction>
+
+  <section xml:id="divisibilidad">
+  <title>Divisibilidad</title>
+
+  <definition xml:id="def-divisibilidad">
+    <statement>
+      <p>
+        Sean <m>a</m> y <m>b</m> enteros, con <m>a\ne 0</m>. Decimos que
+        <m>a</m> divide a <m>b</m> si existe un entero <m>k</m> tal que
+        <m>b=ak</m>. Se escribe <m>a\mid b</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-divisibilidad">
+    <statement>
+      <p>
+        Como <m>18=6\cdot 3</m>, se cumple <m>6\mid 18</m>. En cambio,
+        <m>6</m> no divide a <m>20</m>, porque no existe un entero <m>k</m>
+        para el cual <m>20=6k</m>.
+      </p>
+    </statement>
+  </example>
+
+  <proposition xml:id="propiedades-divisibilidad">
+    <statement>
+      <p>
+        Sean <m>a,b,c,x,y\in\mathbb Z</m>, con <m>a\ne 0</m>. Se cumplen
+        las siguientes propiedades:
+      </p>
+      <ol>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>b\mid c</m>, entonces <m>a\mid c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>a\mid c</m>, entonces
+            <m>a\mid (bx+cy)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>|a|\le |b|</m> y <m>|b|\le |a|</m>, entonces
+            <m>|a|=|b|</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\mid b</m> y <m>b\ne 0</m>, entonces <m>|a|\le |b|</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Como <m>a\mid b</m>, existe <m>r\in\mathbb Z</m> tal que
+            <m>b=ar</m>. Como <m>b\mid c</m>, existe
+            <m>s\in\mathbb Z</m> tal que <m>c=bs</m>. Por tanto,
+            <m>c=(ar)s=a(rs)</m>. Puesto que <m>rs\in\mathbb Z</m>, implica que <m>a\mid c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            De <m>a\mid b</m> y <m>a\mid c</m> existen
+            <m>r,s\in\mathbb Z</m> tales que <m>b=ar</m> y <m>c=as</m>.
+            Entonces
+            <m>bx+cy=(ar)x+(as)y=a(rx+sy)</m>. Como
+            <m>rx+sy\in\mathbb Z</m>, se concluye que
+            <m>a\mid (bx+cy)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Los números <m>|a|</m> y <m>|b|</m> son enteros no negativos.
+            La propiedad antisimétrica del orden dice que si cada uno es
+            menor o igual que el otro, entonces son iguales. Por tanto,
+            <m>|a|=|b|</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Como <m>a\mid b</m>, existe <m>k\in\mathbb Z</m> tal que
+            <m>b=ak</m>. Puesto que <m>b\ne 0</m>, se tiene <m>k\ne 0</m>,
+            así que <m>|k|\ge 1</m>. Luego
+            <m>|b|=|a||k|\ge |a|</m>, y por tanto <m>|a|\le |b|</m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="algoritmo-de-la-division">
+    <title>Algoritmo de la división</title>
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m>, con <m>b\ne 0</m>. Existen únicos
+        <m>q,r\in\mathbb Z</m> tales que
+        <m>a=bq+r</m> y <m>0\le r\lt |b|</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Consideremos el conjunto
+        <m>S=\{a-|b|k:k\in\mathbb Z\text{ y }a-|b|k\ge 0\}</m>.
+        Este conjunto no es vacío, pues por la propiedad arquimediana existe
+        <m>n\in\mathbb Z</m> tal que <m>a+|b|n\ge 0</m>.
+        Por el principio del buen orden, <m>S</m> tiene un elemento mínimo
+        <m>r=a-|b|q</m> para algún <m>q\in\mathbb Z</m>.
+        Así, <m>a=|b|q+r</m> y <m>r\ge 0</m>.
+        Además, <m>r\lt |b|</m>, pues, si <m>r\ge |b|</m>, entonces
+        <m>0\le r-|b|=a-|b|(q+1)\in S</m>, pero
+        <m>r-|b|\lt r</m>, lo cual contradice la minimalidad de <m>r</m>.
+      </p>
+      <p>
+        Si <m>b&gt;0</m>, entonces <m>|b|=b</m>, y tomando
+        <m>Q=q</m> obtenemos <m>a=bQ+r</m>.
+        Si <m>b\lt 0</m>, entonces <m>|b|=-b</m>, y tomando
+        <m>Q=-q</m> obtenemos <m>a=bQ+r</m>.
+        Por tanto, en ambos casos existe una representación
+        <m>a=bQ+r</m>, donde <m>0\le r\lt |b|</m>.
+      </p>
+      <p>
+        Para probar la unicidad, supongamos que existen
+        <m>q,r,Q,R\in\mathbb Z</m> tales que
+        <m>a=bq+r</m> y <m>a=bQ+R</m>, con
+        <m>0\le r,R\lt |b|</m>.
+        Al restar ambas representaciones, obtenemos
+        <m>b(q-Q)=R-r</m>.
+        Como <m>0\le r,R\lt |b|</m>, se tiene
+        <m>-|b|\lt R-r\lt |b|</m>.
+        Si <m>q\ne Q</m>, entonces <m>|q-Q|\ge 1</m> y, por tanto,
+        <m>|b(q-Q)|\ge |b|</m>, lo cual contradice
+        <m>|R-r|\lt |b|</m>.
+        En consecuencia, <m>q=Q</m>. Sustituyendo en la igualdad
+        anterior, obtenemos <m>r=R</m>. Por tanto, la representación
+        es única.
+      </p>
+    </proof>
+  </theorem>
+
+  <definition xml:id="def-mcd">
+    <statement>
+      <p>
+        El <term>máximo común divisor</term> de dos enteros
+        <m>a</m> y <m>b</m>, no ambos cero, es el entero positivo <m>d</m>
+        que satisface las siguientes propiedades:
+      </p>
+      <p>
+        1. <m>d\mid a</m> y <m>d\mid b</m>.
+      </p>
+      <p>
+        2. Si <m>c\mid a</m> y <m>c\mid b</m>, entonces <m>c\mid d</m>.
+      </p>
+      <p>
+        Se denota por <m>\operatorname{mcd}(a,b)=d</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    El siguiente teorema nos ayudará en la construcción del máximo común
+    divisor de dos enteros.
+  </p>
+
+  <theorem xml:id="teorema-mcd">
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m>, no ambos cero. Existen enteros
+        <m>x,y\in\mathbb Z</m> tales que
+        <m>\operatorname{mcd}(a,b)=ax+by</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>S=\{ax+by:x,y\in\mathbb Z\}\cap\mathbb Z^+</m>. Como
+        alguno de <m>a</m> o <m>b</m> es distinto de cero, existe una
+        combinación entera positiva de ambos, así que <m>S</m> no es vacío.
+        Por el principio del buen orden, <m>S</m> tiene un elemento mínimo
+        <m>d=ax_0+by_0</m> para algunos <m>x_0,y_0\in\mathbb Z</m>.
+      </p>
+      <p>
+        Aplicamos el algoritmo de la división a <m>a</m> y <m>d</m>.
+        Existen <m>q,r\in\mathbb Z</m> tales que
+        <m>a=dq+r</m> y <m>0\le r&lt;d</m>. Entonces
+        <m>r=a-dq=a(1-qx_0)+b(-qy_0)</m>, por lo que <m>r</m> es una
+        combinación entera de <m>a</m> y <m>b</m>. Si <m>r&gt;0</m>, entonces
+        <m>r\in S</m> y <m>r&lt;d</m>, en contradicción con la minimalidad
+        de <m>d</m>. Por tanto, <m>r=0</m> y <m>d\mid a</m>.
+      </p>
+      <p>
+        De manera análoga, al dividir <m>b</m> entre <m>d</m>, el residuo
+        también es una combinación entera de <m>a</m> y <m>b</m>. La misma
+        minimalidad implica que dicho residuo es cero, así que <m>d\mid b</m>.
+        Finalmente, si <m>c\mid a</m> y <m>c\mid b</m>, entonces
+        <m>c\mid(ax_0+by_0)=d</m>. Como <m>d&gt;0</m>, satisface las
+        propiedades de la definición del máximo común divisor.
+      </p>
+    </proof>
+  </theorem>
+</section>
+  <section xml:id="numeros-primos">
+  <title>Números primos</title>
+
+  <definition xml:id="def-numero-primo">
+    <statement>
+      <p>
+        Un entero <m>p&gt;1</m> es primo si sus únicos divisores positivos son
+        <m>1</m> y <m>p</m>. Si tiene otros divisores positivos, se llama
+        compuesto.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-primos">
+    <statement>
+      <p>
+        El número <m>7</m> es primo: sus únicos divisores positivos son
+        <m>1</m> y <m>7</m>. El número <m>8</m> es compuesto, porque
+        <m>2\mid 8</m> y <m>4\mid 8</m>.
+      </p>
+    </statement>
+  </example>
+
+  <theorem xml:id="teorema-primos">
+    <statement>
+      <p>
+        Sean <m>a</m> y <m>b</m> enteros mayores que <m>1</m>. Decimos que
+        <m>a</m> y <m>b</m> son primos relativos si
+        <m>\operatorname{mcd}(a,b)=1</m>. En otras palabras, no tienen divisores
+        positivos en común, excepto <m>1</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>
+  <section xml:id="congruencia">
+  <title>Congruencia modulo n</title>
+
+  <definition xml:id="def-congruencia">
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m> y sea <m>n</m> un entero positivo.
+        Decimos que <m>a</m> es congruente con <m>b</m> módulo <m>n</m> si
+        <m>n\mid(a-b)</m>. Escribimos <m>a\equiv b\pmod n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-congruencia">
+    <statement>
+      <p>
+        Como <m>6\mid(17-5)</m>, se cumple
+        <m>17\equiv 5\pmod 6</m>. En cambio,
+        <m>17\not\equiv 4\pmod 6</m>, pues <m>6</m> no divide a
+        <m>17-4=13</m>.
+      </p>
+    </statement>
+  </example>
+  <proposition xml:id="congruencia-es-relacion-de-equivalencia">
+    <title>(La congruencia es una relación de equivalencia)</title>
+    <statement>
+      <p> La relación de congruencia modulo <m>n</m> es una relación de equivalencia en
+        <m>\mathbb Z</m>.
+        Es decir, para
+        cualesquiera <m>a,b,c\in\mathbb Z</m>:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>a\equiv a\pmod n</m> (reflexividad).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\equiv b\pmod n</m>, entonces
+            <m>b\equiv a\pmod n</m> (simetría).
+          </p>
+        </li>
+        <li>
+          <p>
+            Si <m>a\equiv b\pmod n</m> y <m>b\equiv c\pmod n</m>, entonces
+            <m>a\equiv c\pmod n</m> (transitividad).
+          </p>
+        </li>
+      </ol>
+    </statement>
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Como <m>a-a=0=n\cdot 0</m>, se tiene <m>n\mid(a-a)</m>.
+            Por la definición de congruencia, <m>a\equiv a\pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supongamos que <m>a\equiv b\pmod n</m>. Entonces
+            <m>n\mid(a-b)</m>, así que existe <m>k\in\mathbb Z</m> tal que
+            <m>a-b=nk</m>. Por tanto,
+            <m>b-a=-nk=n(-k)</m>. Como <m>-k\in\mathbb Z</m>,
+            <m>n\mid(b-a)</m>, y por la definición de congruencia,
+            <m>b\equiv a\pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Supongamos que <m>a\equiv b\pmod n</m> y
+            <m>b\equiv c\pmod n</m>. Existen <m>r,s\in\mathbb Z</m> tales
+            que <m>a-b=nr</m> y <m>b-c=ns</m>. Al sumar estas igualdades,
+            obtenemos <m>a-c=n(r+s)</m>. Como <m>r+s\in\mathbb Z</m>,
+            <m>n\mid(a-c)</m>, y por tanto <m>a\equiv c\pmod n</m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+  </proposition>
+
+  <definition xml:id="def-Z_n">
+    <statement>
+      <p>
+        El conjunto de todas las clases de equivalencia de la relación de congruencia módulo <m>n</m>
+        se denota por <m>\mathbb Z_n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="thm-Z_n">
+    <statement>
+      <p>
+        El conjunto <m>\mathbb Z_n = \{[0],[1],\ldots,[n-1]\}</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>a\in\mathbb Z</m>. Por el algoritmo de la división, existen
+        enteros <m>q,r</m> con <m>0\le r&lt;n</m> tales que
+        <m>a=nq+r</m>. Entonces <m>a-r=nq</m>, así que
+        <m>n\mid(a-r)</m>, y por la definición de congruencia,
+        <m>a\equiv r\pmod n</m>. Por lo tanto, cada clase de equivalencia
+        <m>[a]</m> es igual a una de las clases
+        <m>[0],[1],\ldots,[n-1]</m>.
+      </p>
+    </proof>
+  </theorem>
+</section>
+</chapter>
+    <chapter xmlns:ns0="http://pretextbook.org/2020/pretext/internal" xml:id="ch-chapter-title">
+  <title>Teoría de grupos</title>
+
+  <introduction>
+    <p>
+      En este capítulo estudiaremos los grupos, una de las estructuras
+      fundamentales del álgebra. Comenzaremos con su definición y algunos
+      ejemplos básicos.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <section xml:id="sec-section-name">
+  <title>Grupos</title>
+
+  <definition xml:id="def-grupo">
+    <statement>
+      <p>
+        Un <term>grupo</term> es un conjunto no vacío <m>G</m> junto con una
+        operación <m>*</m> que satisface las siguientes propiedades:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <em>Cerradura:</em> si <m>a,b\in G</m>, entonces <m>a*b\in G</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Asociatividad:</em> para cualesquiera <m>a,b,c\in G</m>,
+            <m>(a*b)*c=a*(b*c)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Elemento identidad:</em> existe <m>e\in G</m> tal que, para
+            todo <m>a\in G</m>, <m>e*a=a*e=a</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Inversos:</em> para cada <m>a\in G</m> existe <m>a^{-1}\in G</m>
+            tal que <m>a*a^{-1}=a^{-1}*a=e</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </definition>
+
+  <example xml:id="ejemplo-enteros-suma">
+    <statement>
+      <p>El conjunto de los enteros <m>(\mathbb{Z},+)</m> es un grupo.</p>
+    </statement>
+    <solution>
+      <p>
+        La suma de dos enteros es un entero, así que se cumple la cerradura.
+        La suma es asociativa: para cualesquiera <m>a,b,c\in\mathbb{Z}</m>,
+        <m>(a+b)+c=a+(b+c)</m>.
+        El elemento identidad es <m>0</m>, pues <m>a+0=0+a=a</m>.
+        Finalmente, el inverso de cada <m>a\in\mathbb{Z}</m> es <m>-a</m>,
+        ya que <m>a+(-a)=(-a)+a=0</m>.
+      </p>
+    </solution>
+  </example>
+
+
+  <example xml:id="ejemplo-racionales-suma">
+    <statement>
+      <p>
+        El conjunto de los números racionales <m>(\mathbb{Q},+)</m> es un grupo.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="ejemplo-naturales-suma">
+    <statement>
+      <p>
+        Los números naturales con la suma no forman un grupo: por ejemplo,
+        <m>1</m> no tiene un inverso aditivo que también sea un número natural.
+      </p>
+    </statement>
+  </example>
+  
+
+  <definition xml:id="def-subgrupo">
+    <statement>
+      <p>
+        Si <m>a*b=b*a</m> para todo <m>a,b\in G</m>, decimos que el grupo <m>G</m> es
+        <term>abeliano</term> o <term>conmutativo</term>.
+      </p>
+    </statement>
+  </definition>
+
+  
+
+  
+</section>
+
+</chapter>
+    
+
+
+    <!-- Include backmatter -->
+    <backmatter xmlns:ns0="http://pretextbook.org/2020/pretext/internal" xml:id="backmatter">
+  <title>Backmatter</title>
+
+  <!-- <solutions divisional="hint"> <title>Selected Hints</title> </solutions> -->
+
+  <!-- <solutions divisional="solution"> <title>Selected Solutions</title> </solutions> -->
+
+  <!-- <appendix> <title>List of Symbols</title> <notation-list/> </appendix> -->
+
+  <!-- <index> <title>Index</title> <index-list/> </index> -->
+
+  <colophon>
+    <p> This book was authored in <pretext/>. </p>
+  </colophon>
+</backmatter>
+
+  </book>
+</pretext>

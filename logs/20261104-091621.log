@@ -1,0 +1,8 @@
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Validating source of target web (method: local, report form: full, engine: jing).
+INFO    : converting /tmp/ptx-uo865ann/merged.xml to enhanced (pre-processed) PreTeXt source as /tmp/ptx-uo865ann/assembled-attributed.xml
+INFO    : XSL conversion of /tmp/ptx-uo865ann/merged.xml by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Validation could not be performed.
+ERROR   : Install jing and make sure it is on your PATH (or name it in executables.ptx), or use `pretext validate --method server` or `pretext validate --engine salve`.

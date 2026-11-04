@@ -41,6 +41,17 @@ body {
   margin-bottom: 2rem;
 }
 
+#frontmatter h1.heading::after {
+  content: "G / ker(φ) ≅ im(φ)";
+  display: block;
+  margin: 3rem auto;
+  color: #426b83;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-style: italic;
+  text-align: center;
+}
+
 .ptx-content h2.heading,
 .ptx-content h3.heading {
   margin-top: 2.5rem;

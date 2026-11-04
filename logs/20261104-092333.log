@@ -1,0 +1,9 @@
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Building theme for target 'web'
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /home/josue/estructuras-algebra/source
+INFO    : Building custom css theme: theme-custom
+INFO    : Theme built for target 'web'
+INFO    : 
