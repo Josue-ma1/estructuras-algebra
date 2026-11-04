@@ -142,4 +142,64 @@
       </p>
     </proof>
   </theorem>
+
+  <definition xml:id="def-mcd">
+    <statement>
+      <p>
+        El <term>máximo común divisor</term> de dos enteros
+        <m>a</m> y <m>b</m>, no ambos cero, es el entero positivo <m>d</m>
+        que satisface las siguientes propiedades:
+      </p>
+      <p>
+        1. <m>d\mid a</m> y <m>d\mid b</m>.
+      </p>
+      <p>
+        2. Si <m>c\mid a</m> y <m>c\mid b</m>, entonces <m>c\mid d</m>.
+      </p>
+      <p>
+        Se denota por <m>\operatorname{mcd}(a,b)=d</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    El siguiente teorema nos ayudará en la construcción del máximo común
+    divisor de dos enteros.
+  </p>
+
+  <theorem xml:id="teorema-mcd">
+    <statement>
+      <p>
+        Sean <m>a,b\in\mathbb Z</m>, no ambos cero. Existen enteros
+        <m>x,y\in\mathbb Z</m> tales que
+        <m>\operatorname{mcd}(a,b)=ax+by</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>S=\{ax+by:x,y\in\mathbb Z\}\cap\mathbb Z^+</m>. Como
+        alguno de <m>a</m> o <m>b</m> es distinto de cero, existe una
+        combinación entera positiva de ambos, así que <m>S</m> no es vacío.
+        Por el principio del buen orden, <m>S</m> tiene un elemento mínimo
+        <m>d=ax_0+by_0</m> para algunos <m>x_0,y_0\in\mathbb Z</m>.
+      </p>
+      <p>
+        Aplicamos el algoritmo de la división a <m>a</m> y <m>d</m>.
+        Existen <m>q,r\in\mathbb Z</m> tales que
+        <m>a=dq+r</m> y <m>0\le r&lt;d</m>. Entonces
+        <m>r=a-dq=a(1-qx_0)+b(-qy_0)</m>, por lo que <m>r</m> es una
+        combinación entera de <m>a</m> y <m>b</m>. Si <m>r&gt;0</m>, entonces
+        <m>r\in S</m> y <m>r&lt;d</m>, en contradicción con la minimalidad
+        de <m>d</m>. Por tanto, <m>r=0</m> y <m>d\mid a</m>.
+      </p>
+      <p>
+        De manera análoga, al dividir <m>b</m> entre <m>d</m>, el residuo
+        también es una combinación entera de <m>a</m> y <m>b</m>. La misma
+        minimalidad implica que dicho residuo es cero, así que <m>d\mid b</m>.
+        Finalmente, si <m>c\mid a</m> y <m>c\mid b</m>, entonces
+        <m>c\mid(ax_0+by_0)=d</m>. Como <m>d&gt;0</m>, satisface las
+        propiedades de la definición del máximo común divisor.
+      </p>
+    </proof>
+  </theorem>
 </section>

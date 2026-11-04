@@ -1,0 +1,17 @@
+INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Validating source of target web (method: local, report form: full, engine: salve).
+WARNING : The salve engine is experimental. Its messages are worded differently from jing's, so a report from it will not match a report from jing line for line.
+INFO    : Installing the salve validator into /home/josue/.ptx/2.56.1/salve (first use only).
+INFO    : converting /tmp/ptx-bcalbgjl/merged.xml to enhanced (pre-processed) PreTeXt source as /tmp/ptx-bcalbgjl/assembled-attributed.xml
+INFO    : XSL conversion of /tmp/ptx-bcalbgjl/merged.xml by /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /home/josue/estructuras-algebra/logs/main-assembled.xml by /home/josue/.ptx/2.56.1/core/schema/pretext-validation-plus.xsl
+INFO    : successful application of /home/josue/.ptx/2.56.1/core/schema/pretext-validation-plus.xsl
+INFO    : schema validation raised 10 messages
+INFO    : no experimental constructs are in use
+INFO    : validation-plus stylesheet raised no messages
+INFO    : consolidated validation report in /home/josue/estructuras-algebra/logs/main-validation.txt
+INFO    : locations refer to the assembled source in /home/josue/estructuras-algebra/logs/main-assembled.xml
+ERROR   : PreTeXt source did NOT pass validation (10 messages).
+ERROR   : See /home/josue/estructuras-algebra/logs/main-validation.txt for the full report.

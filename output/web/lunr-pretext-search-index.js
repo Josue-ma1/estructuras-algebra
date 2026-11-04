@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "1.1",
   "title": "Divisibilidad",
-  "body": " Divisibilidad    Sean y enteros, con . Decimos que divide a si existe un entero tal que . Se escribe .      Como , se cumple . En cambio, no divide a , porque no existe un entero para el cual .      Sean , con . Se cumplen las siguientes propiedades:    Si y , entonces .    Si y , entonces .    Si y , entonces .    Si y , entonces .        Como , existe tal que . Como , existe tal que . Por tanto, . Puesto que , implica que .    De y existen tales que y . Entonces . Como , se concluye que .    Los números y son enteros no negativos. La propiedad antisimétrica del orden dice que si cada uno es menor o igual que el otro, entonces son iguales. Por tanto, .    Como , existe tal que . Puesto que , se tiene , así que . Luego , y por tanto .       Algoritmo de la división   Sean , con . Existen únicos tales que y .    Consideremos el conjunto . Este conjunto no es vacío, pues por la propiedad arquimediana existe tal que . Por el principio del buen orden, tiene un elemento mínimo para algún . Así, y . Además, , pues, si , entonces , pero , lo cual contradice la minimalidad de .  Si , entonces , y tomando obtenemos . Si , entonces , y tomando obtenemos . Por tanto, en ambos casos existe una representación , donde .  Para probar la unicidad, supongamos que existen tales que y , con . Al restar ambas representaciones, obtenemos . Como , se tiene . Si , entonces y, por tanto, , lo cual contradice . En consecuencia, . Sustituyendo en la igualdad anterior, obtenemos . Por tanto, la representación es única.    "
+  "body": " Divisibilidad    Sean y enteros, con . Decimos que divide a si existe un entero tal que . Se escribe .      Como , se cumple . En cambio, no divide a , porque no existe un entero para el cual .      Sean , con . Se cumplen las siguientes propiedades:    Si y , entonces .    Si y , entonces .    Si y , entonces .    Si y , entonces .        Como , existe tal que . Como , existe tal que . Por tanto, . Puesto que , implica que .    De y existen tales que y . Entonces . Como , se concluye que .    Los números y son enteros no negativos. La propiedad antisimétrica del orden dice que si cada uno es menor o igual que el otro, entonces son iguales. Por tanto, .    Como , existe tal que . Puesto que , se tiene , así que . Luego , y por tanto .       Algoritmo de la división   Sean , con . Existen únicos tales que y .    Consideremos el conjunto . Este conjunto no es vacío, pues por la propiedad arquimediana existe tal que . Por el principio del buen orden, tiene un elemento mínimo para algún . Así, y . Además, , pues, si , entonces , pero , lo cual contradice la minimalidad de .  Si , entonces , y tomando obtenemos . Si , entonces , y tomando obtenemos . Por tanto, en ambos casos existe una representación , donde .  Para probar la unicidad, supongamos que existen tales que y , con . Al restar ambas representaciones, obtenemos . Como , se tiene . Si , entonces y, por tanto, , lo cual contradice . En consecuencia, . Sustituyendo en la igualdad anterior, obtenemos . Por tanto, la representación es única.      El máximo común divisor de dos enteros y , no ambos cero, es el entero positivo que satisface las siguientes propiedades:  1. y .  2. Si y , entonces .  Se denota por .    El siguiente teorema nos ayudará en la construcción del máximo común divisor de dos enteros.    Sean , no ambos cero. Existen enteros tales que .    Sea . Como alguno de o es distinto de cero, existe una combinación entera positiva de ambos, así que no es vacío. Por el principio del buen orden, tiene un elemento mínimo para algunos .  Aplicamos el algoritmo de la división a y . Existen tales que y . Entonces , por lo que es una combinación entera de y . Si , entonces y , en contradicción con la minimalidad de . Por tanto, y .  De manera análoga, al dividir entre , el residuo también es una combinación entera de y . La misma minimalidad implica que dicho residuo es cero, así que . Finalmente, si y , entonces . Como , satisface las propiedades de la definición del máximo común divisor.    "
 },
 {
   "id": "def-divisibilidad",
@@ -53,6 +53,24 @@ var ptx_lunr_docs = [
   "number": "1.1.4",
   "title": "Algoritmo de la división.",
   "body": " Algoritmo de la división   Sean , con . Existen únicos tales que y .    Consideremos el conjunto . Este conjunto no es vacío, pues por la propiedad arquimediana existe tal que . Por el principio del buen orden, tiene un elemento mínimo para algún . Así, y . Además, , pues, si , entonces , pero , lo cual contradice la minimalidad de .  Si , entonces , y tomando obtenemos . Si , entonces , y tomando obtenemos . Por tanto, en ambos casos existe una representación , donde .  Para probar la unicidad, supongamos que existen tales que y , con . Al restar ambas representaciones, obtenemos . Como , se tiene . Si , entonces y, por tanto, , lo cual contradice . En consecuencia, . Sustituyendo en la igualdad anterior, obtenemos . Por tanto, la representación es única.   "
+},
+{
+  "id": "def-mcd",
+  "level": "2",
+  "url": "divisibilidad.html#def-mcd",
+  "type": "Definición",
+  "number": "1.1.5",
+  "title": "",
+  "body": "  El máximo común divisor de dos enteros y , no ambos cero, es el entero positivo que satisface las siguientes propiedades:  1. y .  2. Si y , entonces .  Se denota por .   "
+},
+{
+  "id": "teorema-mcd",
+  "level": "2",
+  "url": "divisibilidad.html#teorema-mcd",
+  "type": "Teorema",
+  "number": "1.1.6",
+  "title": "",
+  "body": "  Sean , no ambos cero. Existen enteros tales que .    Sea . Como alguno de o es distinto de cero, existe una combinación entera positiva de ambos, así que no es vacío. Por el principio del buen orden, tiene un elemento mínimo para algunos .  Aplicamos el algoritmo de la división a y . Existen tales que y . Entonces , por lo que es una combinación entera de y . Si , entonces y , en contradicción con la minimalidad de . Por tanto, y .  De manera análoga, al dividir entre , el residuo también es una combinación entera de y . La misma minimalidad implica que dicho residuo es cero, así que . Finalmente, si y , entonces . Como , satisface las propiedades de la definición del máximo común divisor.   "
 },
 {
   "id": "numeros-primos",
