@@ -20,7 +20,7 @@ INFO    : Downloading Runestone Services, version 8.3.6
 INFO    : Extracting Runestone Services from archive file
 INFO    : discovering source file's directory name: /home/josue/estructuras-algebra/source
 INFO    : Building custom css theme: theme-custom
-INFO    : converting /home/josue/estructuras-algebra/source/main.ptx to HTML in /tmp/ptx-48zsh_d1
+INFO    : converting /home/josue/estructuras-algebra/source/main.ptx to HTML in /tmp/ptx-du3fx_px
 INFO    : XSL conversion of /home/josue/estructuras-algebra/source/main.ptx by /home/josue/.ptx/2.56.1/core/xsl/pretext-html.xsl
 INFO    : messages from the log for XSL processing (prefaced with a *):
 INFO    : * PTX:INFO:   checking all deprecated elements.
@@ -168,9 +168,21 @@ WARNING : * PTX:WARNING: could not translate string with id "readability-assisti
 WARNING : * PTX:WARNING: could not translate string with id "readability-expose-permalinks" into language for code "es-ES"
 WARNING : * PTX:WARNING: could not translate string with id "reset-all" into language for code "es-ES"
 WARNING : * PTX:WARNING: could not translate string with id "top" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "search-book" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-settings" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-line-height" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-content-font-size" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-theme" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-theme-system" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-theme-light" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-theme-dark" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-assistive-technologies" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "readability-expose-permalinks" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "reset-all" into language for code "es-ES"
+WARNING : * PTX:WARNING: could not translate string with id "top" into language for code "es-ES"
 INFO    : successful application of /home/josue/.ptx/2.56.1/core/xsl/pretext-html.xsl
-INFO    : Removing temporary directory /tmp/ptx-48zsh_d1
-INFO    : Removing temporary directory /tmp/ptx-ifs7kjma
+INFO    : Removing temporary directory /tmp/ptx-du3fx_px
+INFO    : Removing temporary directory /tmp/ptx-iped1ch7
 INFO    : 
 Finished build for target web. Run `pretext view web` to see the results.
 

@@ -301,7 +301,7 @@
     <!-- not on the path to the current page; the default is "no".       -->
     <!-- @preexpanded-levels, 0 through 6 (default 0), says how many     -->
     <!-- levels are expanded initially away from that path.              -->
-      <!--<tableofcontents focused="no" preexpanded-levels="0" />-->
+      <tableofcontents focused="yes" preexpanded-levels="0" />
 
     <!-- Navigation.  @logic is "linear" (the default) or "tree"; -->
     <!-- @upbutton is "yes" (the default) or "no".                -->

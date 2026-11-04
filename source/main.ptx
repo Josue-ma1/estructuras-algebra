@@ -6,8 +6,7 @@
 
   <book xml:id="my-great-book">
     <title>Estructuras Algebraicas</title>
-    <subtitle>Una introducción a las estructuras algebraicas</subtitle>
-
+    
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
