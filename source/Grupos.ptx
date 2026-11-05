@@ -81,7 +81,77 @@
     </statement>
   </definition>
 
-  
+  <theorem xml:id="thm-producto-de-grupos">
+    <statement>
+      <p>
+        Si <m>(G_1,*)</m> y <m>(G_2,\cdot)</m> son grupos, entonces el conjunto
+        <m>G_1\times G_2</m> con la operación
+        <m>(a_1,b_1)\circ(a_2,b_2)=(a_1*a_2,b_1\cdot b_2)</m>
+        es un grupo.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sean <m>(a_1,b_1),(a_2,b_2),(a_3,b_3)\in G_1\times G_2</m>.
+        Demostraremos que se cumplen los cuatro axiomas de grupo.
+      </p>
 
+      <p>
+        <m>\textbf{1. Cerradura.}</m>
+        Como <m>G_1</m> y <m>G_2</m> son grupos, se tiene:
+        <me>a_1*a_2\in G_1,\qquad b_1\cdot b_2\in G_2.</me>
+        Por tanto,
+        <me>(a_1,b_1)\circ(a_2,b_2)
+        =(a_1*a_2,b_1\cdot b_2)\in G_1\times G_2.</me>
+      </p>
+
+      <p>
+        <m>\textbf{2. Asociatividad.}</m>
+        Como las operaciones de <m>G_1</m> y <m>G_2</m> son asociativas:
+        <me>\begin{aligned}
+        &amp;((a_1,b_1)\circ(a_2,b_2))\circ(a_3,b_3)\\
+        &amp;=(a_1*a_2,b_1\cdot b_2)\circ(a_3,b_3)\\
+        &amp;=((a_1*a_2)*a_3,(b_1\cdot b_2)\cdot b_3)\\
+        &amp;=(a_1*(a_2*a_3),b_1\cdot(b_2\cdot b_3))\\
+        &amp;=(a_1,b_1)\circ((a_2,b_2)\circ(a_3,b_3)).
+        \end{aligned}</me>
+      </p>
+
+      <p>
+        <m>\textbf{3. Elemento identidad.}</m>
+        Sean <m>e_1\in G_1</m> y <m>e_2\in G_2</m> los elementos identidad de sus respectivos grupos. Entonces:
+        <me>\begin{aligned}
+        (a_1,b_1)\circ(e_1,e_2)
+        &amp;=(a_1*e_1,b_1\cdot e_2)\\
+        &amp;=(a_1,b_1).
+        \end{aligned}</me>
+        Análogamente,
+        <me>\begin{aligned}
+        (e_1,e_2)\circ(a_1,b_1)
+        &amp;=(e_1*a_1,e_2\cdot b_1)\\
+        &amp;=(a_1,b_1).
+        \end{aligned}</me>
+        Por tanto, <m>(e_1,e_2)</m> es el elemento identidad de <m>G_1\times G_2</m>.
+      </p>
+
+      <p>
+        <m>\textbf{4. Elemento inverso.}</m>
+        Como <m>G_1</m> y <m>G_2</m> son grupos, existen <m>a_1^{-1}\in G_1</m> y <m>b_1^{-1}\in G_2</m>. Entonces:
+        <me>\begin{aligned}
+        (a_1,b_1)\circ(a_1^{-1},b_1^{-1})
+        &amp;=(a_1*a_1^{-1},b_1\cdot b_1^{-1})\\
+        &amp;=(e_1,e_2).
+        \end{aligned}</me>
+        Análogamente,
+        <me>(a_1^{-1},b_1^{-1})\circ(a_1,b_1)=(e_1,e_2).</me>
+        Por tanto, <m>(a_1^{-1},b_1^{-1})</m> es el inverso de <m>(a_1,b_1)</m>.
+      </p>
+
+      <p>
+        En conclusión, <m>G_1\times G_2</m> satisface los cuatro axiomas de grupo. Por tanto,
+        <m>(G_1\times G_2,\circ)</m> es un grupo.
+      </p>
+    </proof>
+  </theorem>
   
 </section>
