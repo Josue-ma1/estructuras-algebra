@@ -219,7 +219,103 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="def-subgrupo-1-1">Si <span class="process-math">\(a*b=b*a\)</span> para todo <span class="process-math">\(a,b\in G\text{,}\)</span> decimos que el grupo <span class="process-math">\(G\)</span> es <dfn class="terminology">abeliano</dfn> o <dfn class="terminology">conmutativo</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#def-subgrupo-1-1" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Definición 2.1.5"><a tabindex="-1" href="#def-subgrupo" title="Copiar encabezado y enlace permanente para Definición 2.1.5" aria-label="Copiar encabezado y enlace permanente para Definición 2.1.5">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Sección 2.1: Grupos"><a tabindex="-1" href="#sec-section-name" title="Copiar encabezado y enlace permanente para Sección 2.1: Grupos" aria-label="Copiar encabezado y enlace permanente para Sección 2.1: Grupos">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-producto-de-grupos"><h2 class="heading">
+<span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="thm-producto-de-grupos-1-1">Si <span class="process-math">\((G_1,*)\)</span> y <span class="process-math">\((G_2,\cdot)\)</span> son grupos, entonces el conjunto <span class="process-math">\(G_1\times G_2\)</span> con la operación <span class="process-math">\((a_1,b_1)\circ(a_2,b_2)=(a_1*a_2,b_1\cdot b_2)\)</span> es un grupo.<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-1-1" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Teorema 2.1.6"><a tabindex="-1" href="#thm-producto-de-grupos" title="Copiar encabezado y enlace permanente para Teorema 2.1.6" aria-label="Copiar encabezado y enlace permanente para Teorema 2.1.6">🔗</a></div>
+</article>
+<details id="thm-producto-de-grupos-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h2 class="heading"><span class="type">Demostración<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h2></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-producto-de-grupos-2-1">Sean <span class="process-math">\((a_1,b_1),(a_2,b_2),(a_3,b_3)\in G_1\times G_2\text{.}\)</span> Demostraremos que se cumplen los cuatro axiomas de grupo.<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-1" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="para logical" id="thm-producto-de-grupos-2-2">
+<div class="para">
+<span class="process-math">\(\textbf{1. Cerradura.}\)</span> Como <span class="process-math">\(G_1\)</span> y <span class="process-math">\(G_2\)</span> son grupos, se tiene:</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-2-4">
+\begin{equation*}
+a_1*a_2\in G_1,\qquad b_1\cdot b_2\in G_2.
+\end{equation*}
+</div>
+<div class="para">Por tanto,</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-2-5">
+\begin{equation*}
+(a_1,b_1)\circ(a_2,b_2)
+=(a_1*a_2,b_1\cdot b_2)\in G_1\times G_2.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-2" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="para logical" id="thm-producto-de-grupos-2-3">
+<div class="para">
+<span class="process-math">\(\textbf{2. Asociatividad.}\)</span> Como las operaciones de <span class="process-math">\(G_1\)</span> y <span class="process-math">\(G_2\)</span> son asociativas:</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-3-4">
+\begin{equation*}
+\begin{aligned}
+&amp;((a_1,b_1)\circ(a_2,b_2))\circ(a_3,b_3)\\
+&amp;=(a_1*a_2,b_1\cdot b_2)\circ(a_3,b_3)\\
+&amp;=((a_1*a_2)*a_3,(b_1\cdot b_2)\cdot b_3)\\
+&amp;=(a_1*(a_2*a_3),b_1\cdot(b_2\cdot b_3))\\
+&amp;=(a_1,b_1)\circ((a_2,b_2)\circ(a_3,b_3)).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-3" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="para logical" id="thm-producto-de-grupos-2-4">
+<div class="para">
+<span class="process-math">\(\textbf{3. Elemento identidad.}\)</span> Sean <span class="process-math">\(e_1\in G_1\)</span> y <span class="process-math">\(e_2\in G_2\)</span> los elementos identidad de sus respectivos grupos. Entonces:</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-4-4">
+\begin{equation*}
+\begin{aligned}
+(a_1,b_1)\circ(e_1,e_2)
+&amp;=(a_1*e_1,b_1\cdot e_2)\\
+&amp;=(a_1,b_1).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Análogamente,</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-4-5">
+\begin{equation*}
+\begin{aligned}
+(e_1,e_2)\circ(a_1,b_1)
+&amp;=(e_1*a_1,e_2\cdot b_1)\\
+&amp;=(a_1,b_1).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Por tanto, <span class="process-math">\((e_1,e_2)\)</span> es el elemento identidad de <span class="process-math">\(G_1\times G_2\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-4" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="para logical" id="thm-producto-de-grupos-2-5">
+<div class="para">
+<span class="process-math">\(\textbf{4. Elemento inverso.}\)</span> Como <span class="process-math">\(G_1\)</span> y <span class="process-math">\(G_2\)</span> son grupos, existen <span class="process-math">\(a_1^{-1}\in G_1\)</span> y <span class="process-math">\(b_1^{-1}\in G_2\text{.}\)</span> Entonces:</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-5-6">
+\begin{equation*}
+\begin{aligned}
+(a_1,b_1)\circ(a_1^{-1},b_1^{-1})
+&amp;=(a_1*a_1^{-1},b_1\cdot b_1^{-1})\\
+&amp;=(e_1,e_2).
+\end{aligned}
+\end{equation*}
+</div>
+<div class="para">Análogamente,</div>
+<div class="displaymath process-math" id="thm-producto-de-grupos-2-5-7">
+\begin{equation*}
+(a_1^{-1},b_1^{-1})\circ(a_1,b_1)=(e_1,e_2).
+\end{equation*}
+</div>
+<div class="para">Por tanto, <span class="process-math">\((a_1^{-1},b_1^{-1})\)</span> es el inverso de <span class="process-math">\((a_1,b_1)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-5" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="para" id="thm-producto-de-grupos-2-6">En conclusión, <span class="process-math">\(G_1\times G_2\)</span> satisface los cuatro axiomas de grupo. Por tanto, <span class="process-math">\((G_1\times G_2,\circ)\)</span> es un grupo.<div class="autopermalink" aria-hidden="true" data-description="Párrafo"><a tabindex="-1" href="#thm-producto-de-grupos-2-6" title="Copiar encabezado y enlace permanente para Párrafo" aria-label="Copiar encabezado y enlace permanente para Párrafo">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Demostración 2.1.6.1"><a tabindex="-1" href="#thm-producto-de-grupos-2" title="Copiar encabezado y enlace permanente para Demostración 2.1.6.1" aria-label="Copiar encabezado y enlace permanente para Demostración 2.1.6.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Sección 2.1: Grupos"><a tabindex="-1" href="#sec-section-name" title="Copiar encabezado y enlace permanente para Sección 2.1: Grupos" aria-label="Copiar encabezado y enlace permanente para Sección 2.1: Grupos">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">

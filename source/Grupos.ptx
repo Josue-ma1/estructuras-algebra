@@ -70,7 +70,6 @@
       </p>
     </statement>
   </example>
-  
 
   <definition xml:id="def-subgrupo">
     <statement>
@@ -93,7 +92,7 @@
     <proof>
       <p>
         Sean <m>(a_1,b_1),(a_2,b_2),(a_3,b_3)\in G_1\times G_2</m>.
-        Demostraremos que se cumplen los cuatro axiomas de grupo.
+        
       </p>
 
       <p>
@@ -153,5 +152,34 @@
       </p>
     </proof>
   </theorem>
+
+  <theorem xml:id="thm-producto-abeliano">
+    <statement>
+      <p>
+        Sean <m>(G_1,*)</m> y <m>(G_2,\cdot)</m> grupos. Si <m>G_1</m> y <m>G_2</m> son abelianos, entonces
+        <m>(G_1\times G_2,\circ)</m> también es abeliano.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sean <m>x,y\in G_1\times G_2</m>. Entonces,
+        <m>x=(a_1,b_1)</m> e <m>y=(a_2,b_2)</m>, donde
+        <m>a_1,a_2\in G_1</m> y <m>b_1,b_2\in G_2</m>.
+      </p>
+      <p>
+        <me>\begin{aligned}
+        x\circ y
+        &amp;=(a_1*a_2,\;b_1\cdot b_2)\\
+        &amp;=(a_2*a_1,\;b_2\cdot b_1)
+        &amp;\qquad\text{(pues \(G_1\) y \(G_2\) son abelianos)}\\
+        &amp;=y\circ x.
+        \end{aligned}</me>
+      </p>
+      <p>
+        Por tanto, <m>G_1\times G_2</m> es abeliano.
+      </p>
+    </proof>
+  </theorem>
+  
   
 </section>

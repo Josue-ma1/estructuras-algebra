@@ -169,7 +169,7 @@ var ptx_lunr_docs = [
   "type": "Sección",
   "number": "2.1",
   "title": "Grupos",
-  "body": " Grupos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .      El conjunto de los números racionales es un grupo.      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.      Si para todo , decimos que el grupo es abeliano o conmutativo .    "
+  "body": " Grupos    Un grupo es un conjunto no vacío junto con una operación que satisface las siguientes propiedades:     Cerradura: si , entonces .     Asociatividad: para cualesquiera , .     Elemento identidad: existe tal que, para todo , .     Inversos: para cada existe tal que .        El conjunto de los enteros es un grupo.    La suma de dos enteros es un entero, así que se cumple la cerradura. La suma es asociativa: para cualesquiera , . El elemento identidad es , pues . Finalmente, el inverso de cada es , ya que .      El conjunto de los números racionales es un grupo.      Los números naturales con la suma no forman un grupo: por ejemplo, no tiene un inverso aditivo que también sea un número natural.      Si para todo , decimos que el grupo es abeliano o conmutativo .      Si y son grupos, entonces el conjunto con la operación es un grupo.    Sean . Demostraremos que se cumplen los cuatro axiomas de grupo.   Como y son grupos, se tiene: Por tanto,    Como las operaciones de y son asociativas:    Sean y los elementos identidad de sus respectivos grupos. Entonces: Análogamente, Por tanto, es el elemento identidad de .   Como y son grupos, existen y . Entonces: Análogamente, Por tanto, es el inverso de .  En conclusión, satisface los cuatro axiomas de grupo. Por tanto, es un grupo.    "
 },
 {
   "id": "def-grupo",
@@ -215,6 +215,15 @@ var ptx_lunr_docs = [
   "number": "2.1.5",
   "title": "",
   "body": "  Si para todo , decimos que el grupo es abeliano o conmutativo .   "
+},
+{
+  "id": "thm-producto-de-grupos",
+  "level": "2",
+  "url": "sec-section-name.html#thm-producto-de-grupos",
+  "type": "Teorema",
+  "number": "2.1.6",
+  "title": "",
+  "body": "  Si y son grupos, entonces el conjunto con la operación es un grupo.    Sean . Demostraremos que se cumplen los cuatro axiomas de grupo.   Como y son grupos, se tiene: Por tanto,    Como las operaciones de y son asociativas:    Sean y los elementos identidad de sus respectivos grupos. Entonces: Análogamente, Por tanto, es el elemento identidad de .   Como y son grupos, existen y . Entonces: Análogamente, Por tanto, es el inverso de .  En conclusión, satisface los cuatro axiomas de grupo. Por tanto, es un grupo.   "
 },
 {
   "id": "backmatter-2",
