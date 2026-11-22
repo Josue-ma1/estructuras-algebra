@@ -99,13 +99,19 @@
     </statement>
     <proof>
       <p>
+        Note que <m>\{[0],[1],\ldots,[n-1]\}\subseteq\mathbb Z_n</m>, ya que
+        <m>\mathbb Z_n</m> contiene todas las clases de equivalencia módulo <m>n</m>.
+      </p>
+      <p>
         Sea <m>a\in\mathbb Z</m>. Por el algoritmo de la división, existen
-        enteros <m>q,r</m> con <m>0\le r&lt;n</m> tales que
-        <m>a=nq+r</m>. Entonces <m>a-r=nq</m>, así que
-        <m>n\mid(a-r)</m>, y por la definición de congruencia,
-        <m>a\equiv r\pmod n</m>. Por lo tanto, cada clase de equivalencia
-        <m>[a]</m> es igual a una de las clases
-        <m>[0],[1],\ldots,[n-1]</m>.
+        <m>q,r\in\mathbb Z</m>, con <m>0\le r&lt;n</m>, tales que
+        <md>
+          <mrow>a &amp;= nq+r,</mrow>
+          <mrow>a-r &amp;= nq.</mrow>
+        </md>
+        Así, <m>n\mid(a-r)</m>, luego <m>a\equiv r\pmod n</m> y <m>[a]=[r]</m>.
+        Por tanto, <m>\mathbb Z_n\subseteq\{[0],[1],\ldots,[n-1]\}</m>,
+        lo que prueba la igualdad.
       </p>
     </proof>
   </theorem>

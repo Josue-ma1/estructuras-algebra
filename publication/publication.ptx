@@ -287,7 +287,13 @@
     <!-- Legacy stylesheets remain available through @style, but without  -->
     <!-- the full range of configuration.  See                            -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-      <css theme="custom" entry-point="theme-custom.scss" provide-dark-mode="yes"/>
+      <!-- Paleta sobria compartida por el encabezado, la navegación y los bloques. -->
+      <css theme="salem" palette="slate"
+           color-main="#243B53"
+           color-fact="#37566B"
+           color-do="#246A73"
+           color-meta="#586775"
+           primary-color-dark="#ADC7DE" />
 
     <!-- Search.  @variant is "textbook" (the default; the value          -->
     <!-- "default" is a synonym), "reference", or "none".  @google-cx is  -->

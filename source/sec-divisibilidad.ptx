@@ -55,39 +55,35 @@
       </ol>
     </statement>
     <proof>
+      <p>En cada caso, asumimos las hipótesis correspondientes.</p>
       <ol>
         <li>
           <p>
-            Como <m>a\mid b</m>, existe <m>r\in\mathbb Z</m> tal que
-            <m>b=ar</m>. Como <m>b\mid c</m>, existe
-            <m>s\in\mathbb Z</m> tal que <m>c=bs</m>. Por tanto,
-            <m>c=(ar)s=a(rs)</m>. Puesto que <m>rs\in\mathbb Z</m>, implica que <m>a\mid c</m>.
+            Existen <m>r,s\in\mathbb Z</m> tales que <m>b=ar</m> y <m>c=bs</m>.
+            Así, <m>c=(ar)s=a(rs)</m>, luego <m>a\mid c</m>.
           </p>
         </li>
         <li>
           <p>
-            De <m>a\mid b</m> y <m>a\mid c</m> existen
-            <m>r,s\in\mathbb Z</m> tales que <m>b=ar</m> y <m>c=as</m>.
+            Existen <m>r,s\in\mathbb Z</m> tales que <m>b=ar</m> y <m>c=as</m>.
             Entonces
-            <m>bx+cy=(ar)x+(as)y=a(rx+sy)</m>. Como
-            <m>rx+sy\in\mathbb Z</m>, se concluye que
-            <m>a\mid (bx+cy)</m>.
+            <md>
+              <mrow>bx+cy &amp;= (ar)x+(as)y</mrow>
+              <mrow>&amp;= a(rx+sy).</mrow>
+            </md>
+            Como <m>rx+sy\in\mathbb Z</m>, se tiene <m>a\mid(bx+cy)</m>.
           </p>
         </li>
         <li>
           <p>
-            Los números <m>|a|</m> y <m>|b|</m> son enteros no negativos.
-            La propiedad antisimétrica del orden dice que si cada uno es
-            menor o igual que el otro, entonces son iguales. Por tanto,
-            <m>|a|=|b|</m>.
+            Por la antisimetría del orden, <m>|a|=|b|</m>.
           </p>
         </li>
         <li>
           <p>
-            Como <m>a\mid b</m>, existe <m>k\in\mathbb Z</m> tal que
-            <m>b=ak</m>. Puesto que <m>b\ne 0</m>, se tiene <m>k\ne 0</m>,
-            así que <m>|k|\ge 1</m>. Luego
-            <m>|b|=|a||k|\ge |a|</m>, y por tanto <m>|a|\le |b|</m>.
+            Escribimos <m>b=ak</m>, con <m>k\in\mathbb Z</m>.
+            Como <m>b\ne 0</m>, <m>k\ne 0</m> y <m>|k|\ge 1</m>.
+            Por tanto, <m>|b|=|a||k|\ge |a|</m>.
           </p>
         </li>
       </ol>

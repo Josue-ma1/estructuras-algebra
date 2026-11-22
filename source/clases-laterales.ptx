@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="clases-laterales">
+  <title>Clases laterales</title>
+
+  <definition xml:id="def-congruencia-modulo-subgrupo">
+    <statement>
+      <p>
+        Sea <m>G</m> un grupo y <m>H\le G</m>.
+        Para <m>a,b\in G</m>, decimos que <m>a</m> es <term>congruente</term> con <m>b</m>
+        módulo <m>H</m> si <m>a^{-1}b\in H</m>, y lo denotamos por
+        <m>a\equiv b\pmod H</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>Probemos que esta relación es una relación de equivalencia.</p>
+
+  <definition xml:id="def-clase-lateral-izquierda">
+    <statement>
+      <p>
+        Sea <m>G</m> un grupo, <m>H\le G</m> y <m>a\in G</m>.
+        La <term>clase lateral izquierda</term> de <m>a</m> respecto a <m>H</m>
+        es el conjunto <m>aH=\{ah\mid h\in H\}</m>
+        (en notación aditiva, <m>a+H=\{a+h\mid h\in H\}</m>).
+      </p>
+    </statement>
+  </definition>
+
+  <proposition xml:id="prop-clase-lateral-igual-subgrupo">
+    <statement>
+      <p>
+        Sea <m>G</m> un grupo, <m>H\le G</m> y <m>a\in G</m>.
+        Si <m>a\in H</m>, entonces <m>aH=H</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Supongamos que <m>a\in H</m>. Si <m>x\in aH</m>, entonces
+        <m>x=ah</m> para algún <m>h\in H</m>. Como <m>H</m> es un subgrupo,
+        <m>ah\in H</m>. Por tanto, <m>aH\subseteq H</m>.
+      </p>
+      <p>
+        Recíprocamente, si <m>h\in H</m>, entonces <m>a^{-1}h\in H</m> y
+        <m>h=a(a^{-1}h)\in aH</m>. Así, <m>H\subseteq aH</m>.
+        Concluimos que <m>aH=H</m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <example xml:id="ejemplo-clase-lateral-Z6">
+    <statement>
+      <p>
+        En el grupo aditivo <m>G=\mathbb Z_6</m>, consideremos el subgrupo
+        <m>H=\{0,2,4\}</m> y el elemento <m>a=2\in H</m>. Al sumar módulo
+        <m>6</m>, obtenemos
+      </p>
+      <me>2+H=\{2+0,2+2,2+4\}=\{2,4,0\}=H.</me>
+      <p>
+        En la figura, los elementos de <m>H</m> están resaltados en azul.
+        Las flechas representan sumar <m>2</m> módulo <m>6</m>:
+        los elementos cambian de posición, pero el conjunto sigue siendo <m>H</m>.
+      </p>
+      <figure xml:id="fig-suma-dos-Z6">
+        <caption>Sumar <m>2</m> módulo <m>6</m> lleva los elementos de
+          <m>H=\{0,2,4\}</m> a elementos del mismo subgrupo.</caption>
+        <image width="55%">
+          <description>Los seis elementos de Z6 aparecen en un círculo.
+            Los elementos 0, 2 y 4 están resaltados en azul y unidos por
+            flechas que forman el ciclo 0 a 2, 2 a 4 y 4 a 0.</description>
+          <latex-image>
+\begin{tikzpicture}[>=stealth, every node/.style={font=\large}]
+  \definecolor{azul}{HTML}{4682B4}
+  \draw[gray!35] (0,0) circle (2cm);
+  \foreach \n/\angulo in {1/30,3/-90,5/150} {
+    \node[circle,draw=gray!50,fill=white,minimum size=9mm]
+      (n\n) at (\angulo:2cm) {\n};
+  }
+  \foreach \n/\angulo in {0/90,2/-30,4/210} {
+    \node[circle,draw=azul,very thick,fill=azul!15,
+      text=azul,minimum size=9mm]
+      (n\n) at (\angulo:2cm) {\n};
+  }
+  \draw[->,very thick,azul] (n0) -- node[midway,sloped,above] {$+2$} (n2);
+  \draw[->,very thick,azul] (n2) -- node[midway,below] {$+2$} (n4);
+  \draw[->,very thick,azul] (n4) -- node[midway,sloped,above] {$+2$} (n0);
+\end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </statement>
+  </example>
+  <proposition xml:id="prop-clases-laterales-particion">
+    <statement>
+      <p>
+        Sea <m>G</m> un grupo y <m>H\le G</m>. El conjunto de clases
+        laterales izquierdas <m>\{aH\mid a\in G\}</m> forma una partición
+        de <m>G</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Como <m>e\in H</m>, todo <m>a\in G</m> pertenece a su clase:
+        <m>a=ae\in aH</m>. Así, las clases son no vacías y cubren <m>G</m>.
+      </p>
+      <p>
+        Supongamos que <m>aH\cap bH\ne\varnothing</m>.
+        Tomemos <m>x\in aH\cap bH</m>. Entonces
+      </p>
+      <md number="no">x=ah_1=bh_2,\qquad h_1,h_2\in H.</md>
+      <p>
+        De aquí, <m>a=bh_2h_1^{-1}</m> y <m>b=ah_1h_2^{-1}</m>.
+        Para cada <m>h\in H</m>,
+      </p>
+      <md number="no">
+        <mrow>ah &amp;=b(h_2h_1^{-1}h)\in bH,</mrow>
+        <mrow>bh &amp;=a(h_1h_2^{-1}h)\in aH.</mrow>
+      </md>
+      <p>
+        Así, <m>aH\subseteq bH</m> y <m>bH\subseteq aH</m>, luego
+        <m>aH=bH</m>. Por tanto, las clases distintas son disjuntas
+        y forman una partición de <m>G</m>.
+      </p>
+    </proof>
+  </proposition>
+
+  <p>
+    Si <m>G</m> es finito, hay un número finito de clases laterales
+    distintas. Las escribimos como <m>a_1H,a_2H,\ldots,a_kH</m>.
+    Entonces
+  </p>
+  <md number="no">G=a_1H\sqcup a_2H\sqcup\cdots\sqcup a_kH.</md>
+  <figure xml:id="fig-particion-clases-laterales">
+    <caption>Las clases laterales distintas son las partes de una partición de <m>G</m>.</caption>
+    <image width="80%">
+      <description>Esquema de un grupo finito G como una figura de contorno irregular dividida
+        en regiones disjuntas, rotuladas a1H, a2H, puntos suspensivos y akH.
+        Los puntos dentro de las regiones representan elementos del grupo.</description>
+      <latex-image>
+\begin{tikzpicture}[every node/.style={font=\large}]
+  \definecolor{azul}{HTML}{4682B4}
+  \def\contorno{(0,1)
+    .. controls (-0.3,2.1) and (0.5,2.7) .. (1.5,2.65)
+    .. controls (2.7,2.55) and (3.1,3.2) .. (4.4,2.9)
+    .. controls (5.5,2.6) and (6.6,3.05) .. (7.5,2.3)
+    .. controls (8.4,1.7) and (8.2,0.6) .. (7.5,0.15)
+    .. controls (6.4,-0.55) and (5.6,-0.1) .. (4.5,-0.4)
+    .. controls (3.4,-0.7) and (2.8,-0.25) .. (1.7,-0.3)
+    .. controls (0.6,-0.4) and (0.05,0.2) .. (0,1) -- cycle}
+  \fill[azul!10] \contorno;
+  \draw[azul,thick] (1.7,-0.3) .. controls (2.3,0.5) and (1.2,1.7) .. (1.5,2.65);
+  \draw[azul,thick] (4.5,-0.4) .. controls (3.8,0.5) and (4.8,1.7) .. (4.4,2.9);
+  \draw[azul,thick] (6,-0.275) .. controls (6.6,0.5) and (5.4,1.7) .. (6.0375,2.83125);
+  \draw[thick,azul] \contorno;
+  \node[above] at (4,3.1) {$G$};
+  \node at (1,1.5) {$a_1H$};
+  \node at (3,1.5) {$a_2H$};
+  \node at (5,1) {$\cdots$};
+  \node at (7,1.5) {$a_kH$};
+  \foreach \x in {1,3,7} {
+    \fill[azul] (\x-0.4,0.65) circle (2pt);
+    \fill[azul] (\x,0.85) circle (2pt);
+    \node[text=azul] at (\x+0.4,0.65) {$\cdots$};
+  }
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+
+  <example xml:id="ejemplo-particion-Z6">
+    <statement>
+      <p>
+        Para <m>H=\{0,2,4\}</m> en <m>\mathbb Z_6</m>, las únicas
+        clases laterales distintas son <m>H</m> y <m>1+H=\{1,3,5\}</m>.
+        La partición es
+      </p>
+      <md number="no">\mathbb Z_6=\{0,2,4\}\sqcup\{1,3,5\},</md>
+      <p>donde <m>\sqcup</m> indica una unión de conjuntos disjuntos.</p>
+    </statement>
+  </example>
+
+  <theorem xml:id="thm-lagrange">
+    <title>Teorema de Lagrange</title>
+    <statement>
+      <p>
+        Sea <m>G</m> un grupo finito y <m>H\le G</m>. Entonces el orden
+        de <m>H</m> divide al orden de <m>G</m>, es decir,
+        <m>|H|\mid |G|</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Sea <m>a\in G</m>. Consideremos la función
+      </p>
+      <md number="no">f:H\longrightarrow aH,\qquad f(h)=ah.</md>
+      <p>
+        Esta función es biyectiva: es sobreyectiva por la definición de <m>aH</m>
+        e inyectiva porque <m>ah_1=ah_2</m> implica <m>h_1=h_2</m>.
+        Por tanto, <m>|aH|=|H|</m>.
+      </p>
+      <p>
+        Como <m>G</m> es finito, sus clases laterales distintas son
+        <m>a_1H,\ldots,a_kH</m>. Por la
+        <xref ref="prop-clases-laterales-particion"/>,
+      </p>
+      <md number="no">G=\bigsqcup_{i=1}^{k}a_iH.</md>
+      <p>Al ser una unión disjunta,</p>
+      <md number="no">
+        <mrow>|G| &amp;=\sum_{i=1}^{k}|a_iH|</mrow>
+        <mrow>&amp;=\sum_{i=1}^{k}|H|</mrow>
+        <mrow>&amp;=k\,|H|.</mrow>
+      </md>
+      <p>Por tanto, <m>|H|\mid |G|</m>.</p>
+    </proof>
+  </theorem>
+</section>

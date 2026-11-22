@@ -1,0 +1,6 @@
+INFO    : Staging deployment according to strategy default_target
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Staging latest build located in `/home/josue/estructuras-algebra/output/web` at `/home/josue/estructuras-algebra/output/stage`.
+INFO    : 
+INFO    : 

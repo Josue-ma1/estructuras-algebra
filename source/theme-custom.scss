@@ -18,6 +18,14 @@ body {
   background: transparent !important;
 }
 
+/* Equilibrar los márgenes y aprovechar el espacio en pantallas grandes. */
+@media screen {
+  .ptx-main > .ptx-content {
+    max-width: 860px;
+    margin-inline: auto;
+  }
+}
+
 .ptx-content .content {
   line-height: 1.8;
   font-size: 1.05rem;
@@ -200,6 +208,14 @@ article.proof > .heading .type {
 }
 
 /* ===== Desplegables (Ejemplo, Observación) ===== */
+
+#ejemplo-enteros-suma details.solution > .knowl__content {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}
 
 details > summary .type,
 details > summary .codenumber,

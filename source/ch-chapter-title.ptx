@@ -13,5 +13,6 @@
 
   <!-- include sections -->
   <xi:include href="Grupos.ptx" />
+  <xi:include href="clases-laterales.ptx" />
 
 </chapter>
